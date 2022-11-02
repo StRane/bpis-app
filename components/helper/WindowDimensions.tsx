@@ -7,8 +7,8 @@ function getWindowDimensions() {
       width,
       height,
     };
-  }else{
-    return 0;
+  } else {
+    return { width: 0, height: 0 };
   }
 }
 
@@ -21,7 +21,6 @@ export default function useWindowDimensions() {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
-
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
