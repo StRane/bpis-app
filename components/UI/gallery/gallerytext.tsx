@@ -12,12 +12,20 @@ interface Props {
 }
 
 const GalleryContent = (props: Props) => {
+
+  const learnMore:string = 'Learn more'
+
+
+
+
   const transitionsTop = useTransition(props, {
     from: { opacity: 0, transform: "translateY(-100%)" },
     enter: { opacity: 1, transform: "scale(1)" },
     leave: { opacity: 0, transform: "scale(0.5)" },
     exitBeforeEnter: true,
   });
+
+
 
   const transitionsMid = useTransition(props, {
     from: { opacity: 0, transform: "translateX(100%)" },
@@ -30,16 +38,16 @@ const GalleryContent = (props: Props) => {
   });
 
   const transitionsButton = useTransition(props, {
-    from: { opacity: 0, visibility: "hidden", transform: "scale(0)" },
-    enter: { opacity: 1, transform: "scale(1)", visibility: "visible" },
-    leave: { opacity: 0, transform: "scale(0.4)", visibility: "hidden" },
+    from: { opacity: 0  },
+    enter: { opacity: 1, transform: "scale(1)", visibility:"visible"},
+    leave: { opacity: 0, transform: "scale(0.4)" ,visibility:"hidden"},
     exitBeforeEnter: true,
   });
 
   const transitionsBack = useTransition(props, {
-    from: { opacity: 0, visibility: "hidden" },
-    enter: { opacity: 1, visibility: "visible" },
-    leave: { opacity: 0, visibility: "hidden" },
+    from: { opacity: 0, },
+    enter: { opacity: 1},
+    leave: { opacity: 0 },
     exitBeforeEnter: true,
   });
 
@@ -103,7 +111,7 @@ const GalleryContent = (props: Props) => {
               <a.button
                 className="hover:bg-bpisg w-1/2 md:w-1/5"
                 style={{
-                  ...animation,
+                  visibility: "hidden",
                   lineHeight: "2.5rem",
                   textTransform: "uppercase",
                   borderStyle: "solid",
@@ -111,10 +119,10 @@ const GalleryContent = (props: Props) => {
                   borderWidth: "1px",
                   alignSelf: "center",
                   borderRadius: "1.5rem",
-           
+                  ...animation,
                 }}
               >
-                Learn More
+                {learnMore}
               </a.button>
             );
           })}
