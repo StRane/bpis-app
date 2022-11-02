@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply px-0 md:px-10 !scrollbar-none;
+  }
+  main {
+    @apply grid grid-cols-12 text-center;
+  }
+}
