@@ -15,7 +15,7 @@ const Exams = () => {
     return<img src={item.pic} alt={item.name} key={`exams_${index}`} className="h-full w-max"/>
   })
 
-  return <div className="col-span-12 grid grid-cols-4 place-items-center mb-7">{examsGallery}</div>;
+  return <div className="col-span-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-y-5 place-items-center mb-10">{examsGallery}</div>;
 };
 
 export default Exams;

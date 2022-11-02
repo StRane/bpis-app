@@ -81,7 +81,7 @@ const MainGallery = () => {
   });
 
   return (
-    <div className="relative w-screen h-[90vh] left-0 md:-left-10 mt-20">
+    <div className="relative w-screen h-[50vh] lg:h-[90vh] left-0 mt-20">
       <div className="w-full h-full absolute top-0">
         {transitions((animation, props) => {
           return (

@@ -83,7 +83,7 @@ const Panel = () => {
   );
 
   return (
-    <div className="col-start-1 col-end-13 grid grid-cols-4 -translate-y-14 bg-bpisb my-auto text-white mb-32">
+    <div className="col-span-12 lg:col-start-2 lg:col-end-12 lg:row-start-2 grid grid-cols-4 md:-left-10 -translate-y-14 bg-bpisb my-auto text-white mb-32">
       {menuitems}
       <button className="col-span-1 bg-bpisg text-white text-left pt-9 pr-5 pb-8 relative md:before:content-[''] md:before:h-full before:absolute before:bg-bpisg before:w-[4.6rem] before:top-0 before:-skew-x-12 before:translate-x-5 before:-left-20 flex before:block group">
         <div className="ml-4 w-3/4 flex flex-col text-left -top-5 after:content-[''] after:w-[1px] after:h-12 after:top-10 after:left-[70%] after:bg-white after:absolute">

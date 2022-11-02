@@ -38,7 +38,7 @@ const Events = () => {
 
   return (
     <div
-      className="col-span-12 w-screen h-screen lg:-inset-x-10 items-center grid grid-cols-1 lg:grid-cols-2 divide-y-1 lg:divide-y-0 lg:divide-x-1 divide-dashed divide-bpisgry2 bg-cover  bg-center before:content-[''] before:absolute relative before:h-full before:w-screen before:left-0 before:top-0 before:bg-bpisshdw before:bg-cover"
+      className="col-span-12 w-screen h-screen items-center grid grid-cols-1 lg:grid-cols-2 divide-y-1 lg:divide-y-0 lg:divide-x-1 divide-dashed divide-bpisgry2 bg-cover  bg-center before:content-[''] before:absolute relative before:h-full before:w-screen before:left-0 before:top-0 before:bg-bpisshdw before:bg-cover"
       style={{ backgroundImage: `url(${imageEvent.src})` }}
     >
       <div className="col-span-1 lg:mx-28 my-auto z-10">
