@@ -99,7 +99,7 @@ const MainGallery = () => {
               <img
                 src={props.pic}
                 alt={props.name}
-                className="object-cover h-full"
+                className="object-cover h-full w-full"
               />
             </a.div>
           );

@@ -66,7 +66,7 @@ const GalleryContent = (props: Props) => {
     </div>
   ) : (
     <>
-      <div className="w-full h-full absolute top-0 grid grid-cols-9 text-center">
+      <div className="w-screen h-full absolute top-0 grid grid-cols-9 text-center">
         <GalleryButton
           clicked={props.clicked}
           style="col-span-1 h-10 w-10 md:h-20 md:w-20 self-center text-white text-center align-middle text-xl md:text-4xl rounded-full bg-bpisgry2/30 hover:bg-bpisg z-20 mx-auto"
