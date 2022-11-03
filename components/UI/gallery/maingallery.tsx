@@ -96,11 +96,9 @@ const MainGallery = () => {
                 ...animation,
               }}
             >
-              <Image
+              <img
                 src={props.pic}
                 alt={props.name}
-                fill
-                placeholder="empty"
                 className="object-cover h-full"
               />
             </a.div>
