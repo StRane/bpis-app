@@ -4,12 +4,12 @@
 
 @layer base {
   html {
-    @apply scroll-smooth ;
+    @apply scroll-smooth w-screen;
   }
   body {
-    @apply px-0 !scrollbar-none w-screen;
+    @apply px-0 !scrollbar-none;
   }
   main {
-    @apply grid grid-cols-12 text-center;
+    @apply grid grid-cols-12 text-center w-full;
   }
 }
