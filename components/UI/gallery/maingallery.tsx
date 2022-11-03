@@ -1,6 +1,9 @@
 import { useState } from "react";
 
+
 import GalleryContent from "./gallerytext";
+
+import Image from "next/image";
 
 import { useTransition, animated as a } from "react-spring";
 
@@ -81,19 +84,26 @@ const MainGallery = () => {
   });
 
   return (
-    <div className="relative w-screen h-[50vh] lg:h-[90vh] left-0 mt-20">
+    <div className="relative w-screen h-[90vh] left-0 mt-20">
       <div className="w-full h-full absolute top-0">
         {transitions((animation, props) => {
           return (
             <a.div
               key={props.id}
               style={{
-                backgroundSize: "cover",
-                height: "100%",
-                backgroundImage: `url(${props.pic})`,
+                position:"relative",
+                height:"100%",
                 ...animation,
               }}
-            />
+            >
+              <Image
+                src={props.pic}
+                alt={props.name}
+                fill
+                placeholder="empty"
+                className="object-cover h-full"
+              />
+            </a.div>
           );
         })}
       </div>
