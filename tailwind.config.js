@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateRows: {
+        layout: "repeat(8, minmax(100vh, 1fr))"
+      },
       colors: {
         bpisg: "#2ec4b6",
         bpisg2: "#1c9b8e",

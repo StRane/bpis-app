@@ -24,7 +24,7 @@ const Home: NextPage = () => {
       <main>
         <NavBar />
         <MainGallery />
-        <Panel />
+        {/* <Panel /> */}
         <News />
         <Events />
         <DetailedNews />

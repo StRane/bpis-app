@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  height: 100%;
+  width: 100%;
+}
+
 @layer base {
   html {
-    @apply scroll-smooth w-screen;
-  }
-  body {
-    @apply px-0 !scrollbar-none;
+    @apply scroll-smooth !scrollbar-none;
   }
   main {
     @apply grid grid-cols-12 text-center w-full;

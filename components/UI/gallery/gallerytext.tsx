@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { useTransition, animated as a } from "react-spring";
 
 import GalleryButton from "./gallerybutton";
@@ -12,6 +12,7 @@ interface Props {
 }
 
 const GalleryContent = (props: Props) => {
+  useEffect(() => {});
 
   const transitionsTop = useTransition(props, {
     from: { opacity: 0, transform: "translateY(-100%)" },
@@ -21,44 +22,28 @@ const GalleryContent = (props: Props) => {
   });
 
   const transitionsMid = useTransition(props, {
-    from: { opacity: 0, transform: "translateX(100%)" },
+    from: { opacity: 0, transform: "translateY(100%)" },
     enter: { opacity: 1, transform: "scale(1)" },
-    leave: {
-      opacity: 0,
-      transform: "matrix(0.5, 0.133975, 0.133975, 0.5, 0, 0)",
-    },
+    leave: { opacity: 0, transform: "scale(0.8)" },
     exitBeforeEnter: true,
   });
 
   const transitionsButton = useTransition(props, {
     from: { opacity: 0 },
     enter: { opacity: 1, transform: "scale(1)", visibility: "visible" },
-    leave: { opacity: 0, transform: "scale(0.4)", visibility: "hidden" },
+    leave: { opacity: 0, transform: "scale(0.4)", display: "none" },
     exitBeforeEnter: true,
   });
 
   const transitionsBack = useTransition(props, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
-    leave: { opacity: 0 },
+    leave: { opacity: 0, display:"none" },
     exitBeforeEnter: true,
   });
 
-  return props.main ? (
-    <div className="grid-span-12 h-full relative top-0 grid grid-cols-9 text-center">
-      <GalleryButton
-        clicked={props.clicked}
-        style="col-span-1 h-10 w-10 md:h-20 md:w-20 self-center text-white text-center align-middle text-xl  rounded-full bg-bpisgry2/30 hover:bg-bpisg z-20 mx-auto"
-        type="decrease"
-      />
-      <GalleryButton
-        clicked={props.clicked}
-        style="col-start-9 col-end-10 h-10 w-10 md:h-20 md:w-20 self-center text-white text-center align-middle text-xl rounded-full bg-bpisgry2/30 hover:bg-bpisg z-20 mx-auto"
-        type="increase"
-      />
-    </div>
-  ) : (
-    <div className="col-span-full min-w-[100vw] h-full relative top-0 grid grid-cols-9 text-center">
+  return (
+    <div className="min-w-screen min-h-screen max-h-screen max-w-screen grid grid-cols-9 text-center">
       <GalleryButton
         clicked={props.clicked}
         style="col-span-1 h-10 w-10 md:h-20 md:w-20 self-center text-white text-center align-middle text-xl md:text-4xl rounded-full bg-bpisgry2/30 hover:bg-bpisg z-20 mx-auto"
@@ -98,42 +83,48 @@ const GalleryContent = (props: Props) => {
           );
         })}
 
-        {transitionsButton((animation) => {
-          return (
-            <a.button
-              className="hover:bg-bpisg w-1/2 md:w-1/5"
-              style={{
-                visibility: "hidden",
-                lineHeight: "2.5rem",
-                textTransform: "uppercase",
-                borderStyle: "solid",
-                borderColor: "white",
-                borderWidth: "1px",
-                alignSelf: "center",
-                borderRadius: "1.5rem",
-                ...animation,
-              }}
-            >
-              Learn More
-            </a.button>
-          );
-        })}
+        {!props.main && (
+          <>
+            {transitionsButton((animation) => {
+              return (
+                <a.button
+                  className="hover:bg-bpisg w-1/2 md:w-1/5"
+                  style={{
+                    visibility: "hidden",
+                    lineHeight: "2.5rem",
+                    textTransform: "uppercase",
+                    borderStyle: "solid",
+                    borderColor: "white",
+                    borderWidth: "1px",
+                    alignSelf: "center",
+                    borderRadius: "1.5rem",
+                    ...animation,
+                  }}
+                >
+                  Learn More
+                </a.button>
+              );
+            })}
+          </>
+        )}
       </div>
       <GalleryButton
         clicked={props.clicked}
         style="col-start-9 col-end-10 h-10 w-10 md:h-20 md:w-20 self-center text-white text-center align-middle text-xl md:text-4xl rounded-full bg-bpisgry2/30 hover:bg-bpisg z-20 mx-auto"
         type="increase"
       />
-      {transitionsBack((animation) => {
-        return (
-          <a.div
-            className="w-full h-full absolute top-0 text-center bg-bpisshdwless"
-            style={{
-              ...animation,
-            }}
-          />
-        );
-      })}
+      {!props.main && (
+        <>
+          {transitionsBack((animation) => {
+            return (
+              <a.div
+                className="w-screen h-full absolute top-20 text-center bg-bpisshdwless"
+                style={{ ...animation }}
+              />
+            );
+          })}
+        </>
+      )}
     </div>
   );
 };

@@ -1,17 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import GalleryContent from "./gallerytext";
 
+
 import Image from "next/image";
 
-
-import { useTransition, animated as a } from "react-spring";
+import { useTransition, animated as a, UseTransitionProps } from "react-spring";
 
 import slider1 from "../../../images/main_gallery/BPIS-logo-slider.webp";
 import slider2 from "../../../images/main_gallery/slider1.webp";
 import slider3 from "../../../images/main_gallery/slider2.webp";
 import slider4 from "../../../images/main_gallery/slider3.webp";
-import useWindowDimensions from "../../helper/WindowDimensions";
 
 type galleryItem = {
   name: string;
@@ -63,9 +62,6 @@ const MainGallery = () => {
     },
   ];
 
-  let window = useWindowDimensions();
-
-
   const clickHandler = (decider: number) => {
     let newItem = currentPhoto + decider;
     const max = photos.length - 1;
@@ -80,33 +76,36 @@ const MainGallery = () => {
 
   const currentPic: galleryItem = photos[currentPhoto];
 
-  const transitions = useTransition(currentPic, {
-    from: {
-      opacity: 0,
-      transform: "scale(1.1)",
-    },
-    enter: {
-      opacity: 1,
-      transform: "scale(1)",
-    },
-    leave: {
-      opacity: 0,
-      transform: "scale(0.9)",
-    },
-    exitBeforeEnter: true,
-  });
+  const transitions = useTransition<galleryItem, UseTransitionProps>(
+    currentPic,
+    {
+      from: {
+        opacity: 0,
+        transform: "scaleY(1.05)",
+      },
+      enter: {
+        opacity: 1,
+        transform: "scale(1)",
+      },
+      leave: {
+        opacity: 0,
+        transform: "scale(0.9)",
+      },
+      expires: true,
+      exitBeforeEnter: true,
+    }
+  );
 
   return (
-    <div className="col-span-full min-w-full h-[90vh] left-0">
-      <div className="w-full h-full absolute top-0 left-0">
+    <div className="col-start-1 col-end-13 h-screen overflow-hidden">
+      <div className="w-full h-screen absolute top-20">
         {transitions((animation, props) => {
           return (
             <a.div
               key={props.id}
               style={{
                 position: "relative",
-                height: "90vh",
-                width: "screen",
+                height: "100%",
                 ...animation,
               }}
             >
@@ -114,7 +113,7 @@ const MainGallery = () => {
                 src={props.pic}
                 alt={props.name}
                 fill={true}
-                className="object-cover h-[90vh] w-screen"
+                className="object-cover"
               />
             </a.div>
           );
