@@ -8,20 +8,21 @@ import NavigationHelper from "../components/UI/pagelayouts/NavigationHelper";
 import SideInfos from "../components/UI/pagelayouts/SideInfos";
 import Pagetitle from "../components/UI/pagelayouts/Pagetitle";
 
-const Calendar: NextPage = () => {
+const Schedule: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Calendar page</title>
+        <title>Schedule page</title>
         <link rel="icon" href="/favicon.ico" />
         <html lang="en" />
+        <meta name="description" content="school Schedule page"/>
       </Head>
       <main>
         <NavBar />
-        <Pagetitle name="Calendar" />
+        <Pagetitle name="Schedule" />
         <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
-          <NavigationHelper name="Calendar" />
-          <div className="py-16 col-span-3 space-y-4">Calendar</div>
+          <NavigationHelper name="Schedule" />
+          <div className="py-16 col-span-3 space-y-4">Schedule</div>
           <SideInfos />
         </div>
       </main>
@@ -32,4 +33,4 @@ const Calendar: NextPage = () => {
   );
 };
 
-export default Calendar;
+export default Schedule;

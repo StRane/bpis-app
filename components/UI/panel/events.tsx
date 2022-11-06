@@ -4,6 +4,8 @@ import MediaContext from "../../../store/media-context";
 
 import imageEvent from "../../../images/main_gallery/21stcreative2.webp";
 
+import Image from "next/image";
+
 const Events = () => {
   const mediCtx = useContext(MediaContext);
   const activities = mediCtx.activities!.slice(0, 2);
@@ -11,7 +13,7 @@ const Events = () => {
   const eventsGallery = (
     <div className="grid grid-cols-2 grid-rows-2 mr-5 h-72 sm:px-5 md:px-40 lg:px-0
  lg:h-[24.625rem] overflow-clip text-left">
-     <img className="h-full w-full object-cover" src={activities[0].adresssm} />
+     <div className="relative"><Image className="object-cover" src={`${activities[0].adresssm}`} alt={activities[0].title} fill={true} /></div>
       <div className="bg-white pl-7 flex flex-col justify-center text-bpisgry text-sm">
         <p >
           {activities[0].day}
@@ -32,7 +34,7 @@ const Events = () => {
         </h5>
         <p className="text-white">Read More</p>
       </div>
-      <img className="h-full w-full object-cover" src={activities[1].adresssm} />
+      <div className="relative"><Image className="object-cover" src={`${activities[1].adresssm}`} alt={activities[1].title} fill={true} /></div>
     </div>
   );
 

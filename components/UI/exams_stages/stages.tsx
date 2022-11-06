@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Image1 from "../../../images/stages/img-bottom-4.webp";
 import Image2 from "../../../images/stages/img-bottom-5.webp";
 import Image3 from "../../../images/stages/img-bottom-6.webp";
@@ -27,9 +29,11 @@ const Stages = () => {
         <p className="mx-auto text-2xl absolute left-[50vw] md:left-[15vw] top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 text-white font-semibold uppercase">
           {item.text}
         </p>
-        <img
-          className="absolute w-4/5 left-[10vw] md:left-0 self-center md:w-full h-full object-cover"
+        <Image
+          className="w-4/5 left-[10vw] md:left-0 self-center md:w-full h-full object-cover"
           src={item.pic}
+          alt={item.text}
+          fill={true}
         />
       </li>
     );

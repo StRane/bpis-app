@@ -53,9 +53,9 @@ const NavBar = () => {
       ],
     },
     {
-      name: "Calendar",
+      name: "Schedule",
       id: 4,
-      target: "/calendar",
+      target: "/schedule",
     },
     {
       name: "Contact Us",

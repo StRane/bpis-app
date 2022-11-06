@@ -11,20 +11,19 @@ import Events from "../components/UI/panel/events";
 import News from "../components/UI/panel/news";
 import Panel from "../components/UI/panel/panel";
 
-
 const Home: NextPage = () => {
   return (
     <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-        <html lang="en" />
+        <meta name="description" content="Burapha International School website main page gives general idea about school"/>
       </Head>
 
       <main>
         <NavBar />
         <MainGallery />
-        {/* <Panel /> */}
+        <Panel />
         <News />
         <Events />
         <DetailedNews />
@@ -34,7 +33,7 @@ const Home: NextPage = () => {
       </main>
 
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
     </div>
   );

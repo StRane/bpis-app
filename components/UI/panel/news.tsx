@@ -51,7 +51,7 @@ const News = () => {
     <div className="col-start-1 col-end-13 grid grid-cols-1 self-center lg:grid-cols-3 gap-6 mb-48">
       <div className="col-span-1 mb-8 px-5">
         <h3 className="mb-7 text-4xl font-semibold pb-4 text-left">
-          Final Exams <span className="text-bpisg">Term 2</span>
+          Final Exams <span className="text-bpisgcontrast">Term 2</span>
         </h3>
         <p className="text-lg mb-4 text-bpisgry leading-7 text-left">
           In order for a student to sit for final examinations, he/she must be
@@ -62,7 +62,7 @@ const News = () => {
           <li>9am &#8211; 4pm</li>
           <li>Burapa Pattanasart International School</li>
         </ul>
-        <button className="items-center text-base w-1/2 h-12 self-center leading-10 justify-self-center font-normal uppercase border-solid border rounded-3xl hover:text-white bg-bpisg hover:bg-bpisg2 hover:border-bpisg2">
+        <button aria-label="opan calendar page" className="items-center text-base w-1/2 h-12 self-center leading-10 justify-self-center font-normal uppercase border-solid border rounded-3xl hover:text-white bg-bpisg hover:bg-bpisg2 hover:border-bpisg2">
           <Link href="/calendar">Read more</Link>
         </button>
       </div>
@@ -82,7 +82,7 @@ const News = () => {
           </div>
         ) : (
           <div className="relative">
-            <button
+            <button aria-label="open school introduction video" 
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-bpisg/80 rounded-full p-5 hover:bg-bpisg transition-colors duration-300"
               onClick={clickHandler}
             >
@@ -105,7 +105,7 @@ const News = () => {
       <div className="col-span-1 mb-8">
         <h3 className="tracking-wide font-semibold text-4xl pb-3">
           Latest
-          <span className="text-bpisg"> News</span>
+          <span className="text-bpisgcontrast"> News</span>
         </h3>
         {newsBoard}
       </div>

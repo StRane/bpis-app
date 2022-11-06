@@ -2,12 +2,12 @@ import {createContext} from "react";
 
 
 type media = {
-  name?: string;
-  title?: string;
-  day?: string;
-  month?: string;
-  adress?: string;
-  adresssm?: string;
+  name: string;
+  title: string;
+  day: string;
+  month: string;
+  adress: string;
+  adresssm: string;
   id:number;
 };
 

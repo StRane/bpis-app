@@ -59,7 +59,7 @@ const Comments = () => {
       <p className="text-base md:text-lg xl:text-2xl italic text-bpisgry mb-7">
         {activeComment.comment}
       </p>
-      <p className="text-sm md:text-base xl:text-xl text-bpisg">
+      <p className="text-sm md:text-base xl:text-xl text-[#1B6F68]">
         {activeComment.name + activeComment.from}
         <span className="text-bpisgry">{activeComment.relation}</span>
       </p>

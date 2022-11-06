@@ -12,8 +12,9 @@ module.exports = {
       colors: {
         bpisg: "#2ec4b6",
         bpisg2: "#1c9b8e",
+        bpisgcontrast: "#19968B",
         bpisb: "#353866",
-        bpisgry: "#7c7c7c",
+        bpisgry: "#676767",
         bpisgry2: "#aeaeae",
         bpisshdwless: "rgba(17, 17, 17, 0.65)",
         bpisshdw: "rgba(17, 17, 17, 0.75)",
