@@ -1,17 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Footer from "../components/UI/footer/Footer";
-import NavBar from "../components/UI/navbar/navbar";
+import Footer from "../../components/UI/footer/Footer";
+import NavBar from "../../components/UI/navbar/navbar";
 
 import { useContext } from "react";
 
-import MediaContext from "../store/media-context";
-import EventCard from "../components/UI/newsEventsPage/EventCard";
+import MediaContext from "../../store/media-context";
+import EventCard from "../../components/UI/newsEventsPage/EventCard";
 
-import NavigationHelper from "../components/UI/pagelayouts/NavigationHelper"
+import NavigationHelper from "../../components/UI/pagelayouts/NavigationHelper"
 
-import SideInfos from "../components/UI/pagelayouts/SideInfos";
-import Pagetitle from "../components/UI/pagelayouts/Pagetitle";
+import SideInfos from "../../components/UI/pagelayouts/SideInfos";
+import Pagetitle from "../../components/UI/pagelayouts/Pagetitle";
 
 const Activities: NextPage = () => {
   const mediaCtx = useContext(MediaContext);

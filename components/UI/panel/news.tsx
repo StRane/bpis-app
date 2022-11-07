@@ -63,7 +63,7 @@ const News = () => {
           <li>Burapa Pattanasart International School</li>
         </ul>
         <button aria-label="opan calendar page" className="items-center text-base w-1/2 h-12 self-center leading-10 justify-self-center font-normal uppercase border-solid border rounded-3xl hover:text-white bg-bpisg hover:bg-bpisg2 hover:border-bpisg2">
-          <Link href="/calendar">Read more</Link>
+          <Link href="/schedule">Schedule</Link>
         </button>
       </div>
 

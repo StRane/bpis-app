@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const EventCard: React.FC<{
   adress?: string;
   name?: string;
@@ -5,7 +7,7 @@ const EventCard: React.FC<{
   month?: string;
   title?: string;
   type: string;
-  id:number;
+  id: number;
 }> = (props) => {
   const displayedItems = (
     <div className="mb-24">
@@ -32,9 +34,11 @@ const EventCard: React.FC<{
         </div>
       </div>
       <p className="my-7">Some details...</p>
-      <button className="uppercase px-5 py-3 bg-bpisg text-white hover:bg-bpisg2 font-bold text-sm transition duration-300 ease-in">
-        Read More
-      </button>
+      <Link href={"/activities/" + props.id} key={props.id}>
+        <button className="uppercase px-5 py-3 bg-bpisg text-white hover:bg-bpisg2 font-bold text-sm transition duration-300 ease-in">
+          Read More
+        </button>
+      </Link>
     </div>
   );
 

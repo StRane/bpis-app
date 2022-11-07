@@ -23,7 +23,7 @@ const SocialMedia = () => {
         passHref
         legacyBehavior
       >
-        <a target="_blank" aria-label="bpis twitter page">
+        <a target="_blank" aria-label="bpis twitter page" className="mr-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 30 30"
@@ -38,7 +38,7 @@ const SocialMedia = () => {
         passHref
         legacyBehavior
       >
-        <a target="_blank" aria-label="bpis instagram page">
+        <a target="_blank" aria-label="bpis instagram page" className="mr-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-6 h-6 fill-white hover:fill-bpisg transition-colors duration-300"
