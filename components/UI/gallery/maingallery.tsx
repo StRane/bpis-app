@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 import GalleryContent from "./gallerytext";
 
+import { useInterval } from "usehooks-ts";
 
 import Image from "next/image";
 
@@ -11,6 +12,7 @@ import slider1 from "../../../images/main_gallery/BPIS-logo-slider.webp";
 import slider2 from "../../../images/main_gallery/slider1.webp";
 import slider3 from "../../../images/main_gallery/slider2.webp";
 import slider4 from "../../../images/main_gallery/slider3.webp";
+import blur from "../../../images/white-blurred-background.webp";
 
 type galleryItem = {
   name: string;
@@ -62,6 +64,9 @@ const MainGallery = () => {
     },
   ];
 
+  const [timer, setTimer] = useState(5000);
+  const [clearUp, setClearUp] = useState(false);
+
   const clickHandler = (decider: number) => {
     let newItem = currentPhoto + decider;
     const max = photos.length - 1;
@@ -72,7 +77,22 @@ const MainGallery = () => {
       newItem = 0;
     }
     setCurrentPhoto(newItem);
+    setTimer(timer + 1);
+    setClearUp(!clearUp);
+
   };
+
+  useInterval(() => {
+    clickHandler(1);
+  }, timer);
+
+  useEffect(() => {
+    if (clearUp) {
+      setTimer(timer - 1);
+      setClearUp(!clearUp);
+    }
+    console.log(timer);
+  }, [timer]);
 
   const currentPic: galleryItem = photos[currentPhoto];
 
@@ -113,6 +133,8 @@ const MainGallery = () => {
                 src={props.pic}
                 alt={props.name}
                 fill={true}
+                placeholder="blur"
+                blurDataURL={blur.src}
                 className="object-cover"
               />
             </a.div>
