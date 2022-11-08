@@ -28,7 +28,9 @@ const Activities: NextPage = () => {
           month={item.month}
           title={item.title}
           type="Activities"
+          eventDetails={item?.eventDetails}
           id={item.id}
+          directed={true}
         />
       ))}
     </ul>

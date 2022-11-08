@@ -1,6 +1,8 @@
 import { HiPhone, HiMail } from "react-icons/hi";
 import { HiMap } from "react-icons/hi2";
 
+import Link from "next/link";
+
 import Photo1 from "../../../images/footer/logo-footer.webp";
 
 const Footer = () => {
@@ -22,9 +24,39 @@ const Footer = () => {
           Social
         </h3>
         <ul className="grid grid-cols-3 md:grid-cols-2 tracking-wider leading-8 text-bpisgry2 text-xs lg:text-base pb-5">
-          <li>Facebook</li>
-          <li>Line</li>
-          <li>Twitter</li>
+          <li className="hover:text-bpisg transition-colors duration-200 ease-in">
+            <Link
+              href="https://www.facebook.com/BurapaPattanasart/"
+              passHref
+              legacyBehavior
+            >
+              <a target="_blank" aria-label="bpis facebook page">
+                Facebook
+              </a>
+            </Link>
+          </li>
+          <li className="hover:text-bpisg transition-colors duration-200 ease-in">
+            <Link
+              href="https://www.instagram.com/burapa_international_school/"
+              passHref
+              legacyBehavior
+            >
+              <a target="_blank" aria-label="bpis instagram page">
+                Instagram
+              </a>
+            </Link>
+          </li>
+          <li className="hover:text-bpisg transition-colors duration-200 ease-in">
+            <Link
+              href="https://twitter.com/bpisofficial?lang=en"
+              passHref
+              legacyBehavior
+            >
+              <a target="_blank" aria-label="bpis twitter page">
+                Twitter
+              </a>
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="col-span-1">
@@ -34,17 +66,22 @@ const Footer = () => {
         <ul className="tracking-wider space-y-2 leading-8 text-bpisgry2 text-xs lg:text-base">
           <li className="flex items-center">
             <HiPhone className="h-3 w-3 mr-1 lg:h-6 lg:w-6" />
-            <p>ADMIN (+66) 038-411-236</p>
-            <p>FINANCE (+66) 038-411-235</p>
+            <div className="flex flex-col items-center text-sm">
+              <p>ADMIN (+66) 038-411-236</p>
+              <p>FINANCE (+66) 038-411-235</p>
+            </div>
           </li>
           <li className="flex items-center">
             <HiMail className="h-3 w-3 mr-1 lg:h-6 lg:w-6" />
-            <p>theprincipal.bpis@gmail.com</p>
+            <Link href="mailto:theprincipal.bpis@gmail.com">
+              <p>theprincipal.bpis@gmail.com</p>
+            </Link>
           </li>
           <li className="flex items-start">
             <HiMap className="h-3 w-3 mr-1 translate-y-2 lg:-translate-y-1 lg:mr-2 lg:h-10 lg:w-10" />
             <p>
-              253/17 Moo 13, Sukhumvit -Pattaya Alley 81, Nongprue, Banglamung, Chonburi, Thailand 20150
+              253/17 Moo 13, Sukhumvit -Pattaya Alley 81, Nongprue, Banglamung,
+              Chonburi, Thailand 20150
             </p>
           </li>
         </ul>

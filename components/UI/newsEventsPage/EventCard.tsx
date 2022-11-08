@@ -7,7 +7,9 @@ const EventCard: React.FC<{
   month?: string;
   title?: string;
   type: string;
+  eventDetails?: string;
   id: number;
+  directed?: boolean,
 }> = (props) => {
   const displayedItems = (
     <div className="mb-24">
@@ -33,12 +35,12 @@ const EventCard: React.FC<{
           </div>
         </div>
       </div>
-      <p className="my-7">Some details...</p>
-      <Link href={"/activities/" + props.id} key={props.id}>
+      {props.eventDetails && <p className="my-7">{props.eventDetails}</p>}
+      {props.directed && <Link href={"/activities/" + props.id} key={props.id}>
         <button className="uppercase px-5 py-3 bg-bpisg text-white hover:bg-bpisg2 font-bold text-sm transition duration-300 ease-in">
           Read More
         </button>
-      </Link>
+      </Link>}
     </div>
   );
 

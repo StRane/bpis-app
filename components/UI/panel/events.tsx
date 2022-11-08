@@ -2,6 +2,8 @@ import { useContext } from "react";
 
 import MediaContext from "../../../store/media-context";
 
+import Link from "next/link";
+
 import imageEvent from "../../../images/main_gallery/21stcreative2.webp";
 
 import Image from "next/image";
@@ -11,30 +13,55 @@ const Events = () => {
   const activities = mediCtx.activities!.slice(0, 2);
 
   const eventsGallery = (
-    <div className="grid grid-cols-2 grid-rows-2 mr-5 h-72 sm:px-5 md:px-40 lg:px-0
- lg:h-[24.625rem] overflow-clip text-left">
-     <div className="relative"><Image className="object-cover" src={`${activities[0].adresssm}`} alt={activities[0].title} fill={true} /></div>
-      <div className="bg-white pl-7 flex flex-col justify-center text-bpisgry text-sm">
-        <p >
-          {activities[0].day}
-          {activities[0].month}, 2019
-        </p>
-        <h5 className="text-black font-medium tracking-wide	text-lg mb-2 lg:mb-7">
-          {activities[0].title}
-        </h5>
-        <p className="text-black">Read More</p>
+    <div
+      className="grid grid-cols-2 grid-rows-2 mr-5 h-72 sm:px-5 md:px-40 lg:px-0
+ lg:h-[24.625rem] overflow-clip text-left"
+    >
+      <div className="relative">
+        <Image
+          className="object-cover"
+          src={`${activities[0].adresssm}`}
+          alt={activities[0].title}
+          fill={true}
+        />
       </div>
-      <div className="bg-bpisg flex flex-col justify-center pl-7">
-        <p className="text-white/40 text-sm">
-          {activities[1].day}
-          {activities[1].month}, 2019
-        </p>
-        <h5 className="text-white font-medium tracking-wide	text-lg mb-2 lg:mb-7">
-          {activities[1].title}
-        </h5>
-        <p className="text-white">Read More</p>
+      <div className="bg-white pl-7 flex flex-col justify-center text-bpisgry text-sm group">
+        <Link href={"/activities/" + activities[0].id} key={activities[0].id}>
+          <p>
+            {activities[0].day}
+            {activities[0].month}, 2019
+          </p>
+          <h5 className="text-black font-medium tracking-wide	text-lg mb-2 lg:mb-7 group-hover:text-bpisg transition-colors duration-100 ease-in">
+            {activities[0].title}
+          </h5>
+
+          <p className="text-black group-hover:text-bpisg transition-colors duration-100 ease-in">
+            Read More
+          </p>
+        </Link>
       </div>
-      <div className="relative"><Image className="object-cover" src={`${activities[1].adresssm}`} alt={activities[1].title} fill={true} /></div>
+      <div className="bg-bpisg flex flex-col justify-center pl-7 group">
+        <Link href={"/activities/" + activities[1].id} key={activities[1].id}>
+          <p className="text-white/40 text-sm">
+            {activities[1].day}
+            {activities[1].month}, 2019
+          </p>
+          <h5 className="text-white font-medium tracking-wide	text-lg mb-2 lg:mb-7 group-hover:text-bpisb transition-colors duration-100 ease-in">
+            {activities[1].title}
+          </h5>
+          <p className="text-white group-hover:text-bpisb transition-colors duration-100 ease-in">
+            Read More
+          </p>
+        </Link>
+      </div>
+      <div className="relative">
+        <Image
+          className="object-cover"
+          src={`${activities[1].adresssm}`}
+          alt={activities[1].title}
+          fill={true}
+        />
+      </div>
     </div>
   );
 
@@ -61,8 +88,10 @@ const Events = () => {
           <h1 className="text-blue-700 text-sm lg:text-lg mb-3">BPIS</h1>
         </div>
       </div>
-      <div className="col-span-1 z-10 pt-5
-       lg:p-10">
+      <div
+        className="col-span-1 z-10 pt-5
+       lg:p-10"
+      >
         <h3 className="text-white text-center lg:text-left font-bold tracking-wide text-lg lg:text-4xl pb-8">
           New <span className="text-bpisg">Events</span>
         </h3>

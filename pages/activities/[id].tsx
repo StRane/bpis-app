@@ -46,11 +46,11 @@ const Details = () => {
       </Head>
       <main>
         <NavBar />
-        <Pagetitle name="Details" />
+        <Pagetitle name={"Details" + currActivity.id} />
 
         <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
           <NavigationHelper name="Details" />
-          <div className="py-16 col-span-3 space-y-4">
+          <div className="py-16 col-span-3 space-y-4 list-none">
             <EventCard
               name={currActivity.name}
               adress={currActivity.adress}
@@ -59,6 +59,8 @@ const Details = () => {
               title={currActivity.title}
               type="Activities"
               id={currActivity.id}
+              eventDetails={currActivity.eventDetails}
+              directed={false}
             />
           </div>
 

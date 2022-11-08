@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Image1 from "../../../images/stages/img-bottom-4.webp";
 import Image2 from "../../../images/stages/img-bottom-5.webp";
@@ -9,14 +10,17 @@ const Stages = () => {
     {
       pic: Image1.src,
       text: "Key Stage 3 Admissions",
+      adress: "/yr7-9-program",
     },
     {
       pic: Image2.src,
       text: "IGCSE Admissions",
+      adress: "/yr10-11-program",
     },
     {
       pic: Image3.src,
       text: "A-Level Education",
+      adress: "/yr12-13-program",
     },
   ];
 
@@ -24,17 +28,19 @@ const Stages = () => {
     return (
       <li
         key={`stages_${index}`}
-        className="w-full h-full items-center relative justify-center"
+        className="w-full h-full items-center relative justify-center overflow-hidden"
       >
+        <Link href={item.adress}>
         <p className="mx-auto text-2xl absolute left-[50vw] md:left-[15vw] top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 text-white font-semibold uppercase">
           {item.text}
         </p>
         <Image
-          className="w-4/5 left-[10vw] md:left-0 self-center md:w-full h-full object-cover"
+          className="w-4/5 left-[10vw] md:left-0 self-center md:w-full h-full object-cover transition-transform hover:scale-105 duration-300 ease-in"
           src={item.pic}
           alt={item.text}
           fill={true}
         />
+        </Link>
       </li>
     );
   });

@@ -4,6 +4,8 @@ import Link from "next/link";
 
 import MediaContext from "../../../store/media-context";
 
+import { HiOutlineCalendar } from "react-icons/hi";
+
 import Image1 from "../../../images/youtube/youtubepic.jpg";
 
 const News = () => {
@@ -20,28 +22,17 @@ const News = () => {
     <ul className="divide-y text-left">
       {latestNews.map((item) => (
         <li key={item.id} className="mb-7 pt-7">
+        <Link  href={"/activities/" + item.id} key={item.id} className="mb-7 pt-7">
           <h5 className="text-black hover:text-bpisg text-lg font-normal transition-colors duration-300 mb-2">
             {item.title}
           </h5>
           <div className="flex text-bpisgry">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 mr-4 self-center"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
-            </svg>
+            <HiOutlineCalendar className="h-5 w-5 mr-4 self-center" />
             <p>
               {item.month} {item.day}, 2019
             </p>
           </div>
+        </Link>
         </li>
       ))}
     </ul>
@@ -62,7 +53,10 @@ const News = () => {
           <li>9am &#8211; 4pm</li>
           <li>Burapa Pattanasart International School</li>
         </ul>
-        <button aria-label="opan calendar page" className="items-center text-base w-1/2 h-12 self-center leading-10 justify-self-center font-normal uppercase border-solid border rounded-3xl hover:text-white bg-bpisg hover:bg-bpisg2 hover:border-bpisg2">
+        <button
+          aria-label="opan calendar page"
+          className="items-center text-base w-1/2 h-12 self-center leading-10 justify-self-center font-normal uppercase border-solid border rounded-3xl hover:text-white bg-bpisg hover:bg-bpisg2 hover:border-bpisg2"
+        >
           <Link href="/schedule">Schedule</Link>
         </button>
       </div>
@@ -82,7 +76,8 @@ const News = () => {
           </div>
         ) : (
           <div className="relative">
-            <button aria-label="open school introduction video" 
+            <button
+              aria-label="open school introduction video"
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-bpisg/80 rounded-full p-5 hover:bg-bpisg transition-colors duration-300"
               onClick={clickHandler}
             >
@@ -98,7 +93,11 @@ const News = () => {
                 />
               </svg>
             </button>
-            <img className="mx-auto lg:mx-0" src={Image1.src} alt="Youtube video" />
+            <img
+              className="mx-auto lg:mx-0"
+              src={Image1.src}
+              alt="Youtube video"
+            />
           </div>
         )}
       </div>

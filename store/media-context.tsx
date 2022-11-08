@@ -8,6 +8,7 @@ type media = {
   month: string;
   adress: string;
   adresssm: string;
+  eventDetails?:string,
   id:number;
 };
 
