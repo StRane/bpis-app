@@ -115,9 +115,9 @@ const NavMenu: React.FC<{
     };
     const mobile = {
       mainListStyle: "text-black uppercase text-left",
-      listItemBehavior: "text-lg",
-      activeItemS: "",
-      subMenuStyle: "",
+      listItemBehavior: "",
+      activeItemS: "flex flex-col leading-5",
+      subMenuStyle: "text-xs",
     };
     return type === "desktop" ? desktop : mobile;
   };
