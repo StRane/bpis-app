@@ -91,7 +91,6 @@ const MainGallery = () => {
       setTimer(timer - 1);
       setClearUp(!clearUp);
     }
-    console.log(timer);
   }, [timer]);
 
   const currentPic: galleryItem = photos[currentPhoto];
