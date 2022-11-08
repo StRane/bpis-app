@@ -43,10 +43,10 @@ const GalleryContent = (props: Props) => {
   });
 
   return (
-    <div className="min-w-screen min-h-screen max-h-screen max-w-screen grid grid-cols-9 text-center">
+    <div className="min-w-screen min-h-screen max-h-screen max-w-screen grid grid-cols-7 lg:grid-cols-9 text-center">
       <GalleryButton
         clicked={props.clicked}
-        style="col-span-1 h-10 w-10 md:h-20 md:w-20 self-center text-white text-center align-middle text-xl md:text-4xl rounded-full bg-bpisgry2/30 hover:bg-bpisg z-20 mx-auto"
+        style="hidden lg:block col-span-1 h-10 w-10 md:h-20 md:w-20 self-center text-white text-center align-middle text-xl md:text-4xl rounded-full bg-bpisgry2/30 hover:bg-bpisg z-20 mx-auto"
         type="decrease"
       />
       <div className="col-span-7 justify-center flex flex-col z-20 text-white">
@@ -110,7 +110,7 @@ const GalleryContent = (props: Props) => {
       </div>
       <GalleryButton
         clicked={props.clicked}
-        style="col-start-9 col-end-10 h-10 w-10 md:h-20 md:w-20 self-center text-white text-center align-middle text-xl md:text-4xl rounded-full bg-bpisgry2/30 hover:bg-bpisg z-20 mx-auto"
+        style="hidden lg:block col-start-9 col-end-10 h-10 w-10 md:h-20 md:w-20 self-center text-white text-center align-middle text-xl md:text-4xl rounded-full bg-bpisgry2/30 hover:bg-bpisg z-20 mx-auto"
         type="increase"
       />
       {!props.main && (
