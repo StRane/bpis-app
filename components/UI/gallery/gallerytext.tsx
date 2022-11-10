@@ -53,7 +53,7 @@ const GalleryContent = (props: Props) => {
         {transitionsTop((animation, props) => {
           return (
             <a.h3
-              className="text-2xl md:text-5xl xl:text-7xl pb-16 font-semibold"
+              className="text-2xl pt-10 md:text-5xl xl:text-7xl pb-16 font-semibold"
               style={{
                 ...animation,
               }}

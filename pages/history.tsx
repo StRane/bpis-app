@@ -13,8 +13,8 @@ const History: NextPage = () => {
   return (
     <>
       <Head>
-        <title>History of BPIS page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>History of BPIS</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>

@@ -13,8 +13,8 @@ const Yr12and13: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Year 12-13 students page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Year 12-13 Students</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>

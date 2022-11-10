@@ -15,9 +15,9 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Burapha International School website main page gives general idea about school"/>
+        <title>BPIS</title>
+        <link rel="icon" href="/bpis_logo.ico" />
+        <meta name="description" content="Burapa Pattanasart International School website main page gives general idea about school"/>
       </Head>
 
       <main>

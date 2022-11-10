@@ -13,8 +13,8 @@ const SchoolMagazine: NextPage = () => {
   return (
     <>
       <Head>
-        <title>School magazine page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>School Magazine</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>

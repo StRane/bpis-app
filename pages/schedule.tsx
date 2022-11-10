@@ -12,8 +12,8 @@ const Schedule: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Schedule page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Schedule Page</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
         <meta name="description" content="school Schedule page"/>
       </Head>

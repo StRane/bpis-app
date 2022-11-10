@@ -13,8 +13,8 @@ const ContactUs: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Contact Us page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Contact Us</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>

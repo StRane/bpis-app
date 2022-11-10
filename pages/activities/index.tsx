@@ -39,8 +39,8 @@ const Activities: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Activities page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Activities</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>

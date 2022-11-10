@@ -40,8 +40,8 @@ const Details = () => {
   return (
     <>
       <Head>
-        <title>Activity {currActivity.id} page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Activity {currActivity.id}</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>

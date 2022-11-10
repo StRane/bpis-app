@@ -13,8 +13,8 @@ const Vision: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Our vision page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Our Vision</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>

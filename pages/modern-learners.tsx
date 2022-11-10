@@ -13,8 +13,8 @@ const ModernLearners: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Modern learners page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Modern Learners</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>

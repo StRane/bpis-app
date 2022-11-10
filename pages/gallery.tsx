@@ -13,8 +13,8 @@ const Gallery: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Gallery page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Gallery</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>

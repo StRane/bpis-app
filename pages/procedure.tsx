@@ -12,8 +12,8 @@ const Procedure: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Application procedure page</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Application Procedure</title>
+        <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>
