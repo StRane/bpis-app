@@ -4,12 +4,17 @@ import Link from "next/link";
 
 import MediaContext from "../../../store/media-context";
 
-const GalleryContent = () => {
+interface Props{
+  main?: boolean
+}
+
+const GalleryContent = ({main}: Props) => {
   const mediCtx = useContext(MediaContext);
 
   const activities = mediCtx.activities;
 
-  const mediaContent = [...activities].slice(1);
+  const mediaContent = main? [...activities].slice(1,7): [...activities];
+
 
   const gallery = mediaContent.map((item) => (
 

@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import { useInterval } from "usehooks-ts";
+
+
 const Comments = () => {
   type comment = {
     name: string;
@@ -16,8 +19,8 @@ const Comments = () => {
   const comments: comment[] = [
     {
       name: "Maitreyee Empson,",
-      id:0,
-      key: 'com1',
+      id: 0,
+      key: "com1",
       from: "India,",
       relation: "parent",
       photo: "photo1",
@@ -27,8 +30,8 @@ const Comments = () => {
     {
       name: "Jennifer Areya Keys,",
       from: "US,",
-      id:1,
-      key: 'com2',
+      id: 1,
+      key: "com2",
       relation: "student",
       photo: "photo2",
       comment:
@@ -38,40 +41,33 @@ const Comments = () => {
       name: "Behrouz Shahnaz,",
       from: "Iran,",
       relation: "parent",
-      id:2,
-      key: 'com2',
+      id: 2,
+      key: "com2",
       photo: "photo3",
       comment:
-        '“I have personally chosen this school over other schools due mainly to its friendly and English-speaking atmosphere, kind and considerate teaching staff and director, and above all its well-paced International Curriculum. Now this is the sixth year that my daughter has been in this school and I have noticed that she has honed her social and verbal skills thanks to its multicultural and relaxed environment.”',
+        "“I have personally chosen this school over other schools due mainly to its friendly and English-speaking atmosphere, kind and considerate teaching staff and director, and above all its well-paced International Curriculum. Now this is the sixth year that my daughter has been in this school and I have noticed that she has honed her social and verbal skills thanks to its multicultural and relaxed environment.”",
     },
   ];
 
-  const clickHandler = (id:number) => {
-    setCurrentComment(id);
-  }
+  useInterval(
+    () => setCurrentComment((currentComment + 1) % comments.length),
+    5000
+  );
 
-  const allButtons = comments.map((item,index) => <button key={`comments_${index}`} onClick={()=>clickHandler(item.id)}>{item.photo}</button>);
 
   const activeComment = comments[currentComment];
 
-  const displayedComment = (
-    <div>
-      <p className="text-base md:text-lg xl:text-2xl italic text-bpisgry mb-7">
-        {activeComment.comment}
-      </p>
-      <p className="text-sm md:text-base xl:text-xl text-[#1B6F68]">
-        {activeComment.name + activeComment.from}
-        <span className="text-bpisgry">{activeComment.relation}</span>
-      </p>
-    </div>
-  );
 
-  return (
-    <div className="col-span-12 mb-28">
-      {displayedComment}
-      {allButtons}
-    </div>
-  );
+  return (<div
+          className="col-span-12 mb-28"
+        >
+          <p className="text-base md:text-lg xl:text-2xl italic text-bpisgry mb-7">
+            {activeComment.comment}
+          </p>
+          <p className="text-sm md:text-base xl:text-xl text-[#1B6F68]">
+            {activeComment.name + activeComment.from}
+            <span className="text-bpisgry">{activeComment.relation}</span>
+          </p>
+        </div>);
 };
-
 export default Comments;

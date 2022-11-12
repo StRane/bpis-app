@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const SocialMedia = () => {
   return (
-    <div className="col-start-2 col-end-13 bg-bpisb flex flex-row-reverse pt-2 pr-5">
+    <div className={`col-start-2 col-end-13 flex flex-row-reverse pt-2 pr-5 bg-bpisb`}>
       <Link
         href="https://www.facebook.com/BurapaPattanasart/"
         passHref

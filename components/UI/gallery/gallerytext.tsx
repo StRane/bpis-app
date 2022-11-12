@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTransition, animated as a } from "react-spring";
 
 import GalleryButton from "./gallerybutton";
@@ -12,12 +11,11 @@ interface Props {
 }
 
 const GalleryContent = (props: Props) => {
-  useEffect(() => {});
 
   const transitionsTop = useTransition(props, {
     from: { opacity: 0, transform: "translateY(-100%)" },
     enter: { opacity: 1, transform: "scale(1)" },
-    leave: { opacity: 0, transform: "scale(0.5)" },
+    leave: { opacity: 0, transform: "scale(0.9)" },
     exitBeforeEnter: true,
   });
 

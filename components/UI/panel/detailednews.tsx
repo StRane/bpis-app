@@ -19,7 +19,7 @@ const DetailedNews = () => {
           suspendisse potenti.
         </div>
       </div>
-      <div className="col-span-12 mx-2 h-screen md:h-[80vh] md:grid-cols-3 xl:h-56 pt-5 mb-60 grid grid-cols-2 xl:grid-cols-6 gap-3"><GalleryContent/></div>
+      <div className="col-span-12 mx-2 h-screen md:h-[80vh] md:grid-cols-3 xl:h-56 pt-5 mb-60 grid grid-cols-2 xl:grid-cols-6 gap-3"><GalleryContent main={true}/></div>
     </>
   );
 };

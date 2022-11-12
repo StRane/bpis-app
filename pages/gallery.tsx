@@ -22,7 +22,9 @@ const Gallery: NextPage = () => {
         <Pagetitle name="Gallery" />
         <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
           <NavigationHelper name="Gallery" />
-          <div className="py-16 col-span-4 grid grid-cols-4 gap-5 grid-rows-[19.25rem_19.25rem]">
+          <div
+            className='col-span-12 mx-2 pt-5 mb-60 md:mb-10 grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-screen'
+          >
             <GalleryContent />
           </div>
         </div>
