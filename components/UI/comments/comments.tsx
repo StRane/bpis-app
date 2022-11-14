@@ -51,7 +51,7 @@ const Comments = () => {
 
   useInterval(
     () => setCurrentComment((currentComment + 1) % comments.length),
-    5000
+    10000
   );
 
 

@@ -12,7 +12,7 @@ const Panel = () => {
     {
       name: "Programs",
       subname: "21st Century Learners",
-      adress: "/vision",
+      adress: "/yr7-9-program",
     },
     {
       name: "Achievements",

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useTransition, animated as a } from "react-spring";
 
 import GalleryButton from "./gallerybutton";
@@ -11,7 +12,6 @@ interface Props {
 }
 
 const GalleryContent = (props: Props) => {
-
   const transitionsTop = useTransition(props, {
     from: { opacity: 0, transform: "translateY(-100%)" },
     enter: { opacity: 1, transform: "scale(1)" },
@@ -36,7 +36,7 @@ const GalleryContent = (props: Props) => {
   const transitionsBack = useTransition(props, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
-    leave: { opacity: 0, display:"none" },
+    leave: { opacity: 0, display: "none" },
     exitBeforeEnter: true,
   });
 
@@ -99,7 +99,7 @@ const GalleryContent = (props: Props) => {
                     ...animation,
                   }}
                 >
-                  Learn More
+                  <Link href="/vision" className="h-full w-full">Learn More</Link>
                 </a.button>
               );
             })}

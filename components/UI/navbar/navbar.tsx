@@ -14,7 +14,7 @@ const NavBar = () => {
 
   const [menuItems, setMenuItems] = useState<menuitem[]>([
     {
-      name: "About Us",
+      name: "About BPIS",
       id: 0,
       hovering: false,
       submenu: [

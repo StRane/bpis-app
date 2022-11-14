@@ -37,7 +37,7 @@ const MainGallery = () => {
     {
       name: "Bpis-science-experiment",
       pic: slider2.src,
-      toptext: "A Partnership in Discover on ",
+      toptext: "A Partnership in Discover at ",
       schoolname: true,
       main: false,
       bottext: "Exploring innovative methods to address (future) problems.",
@@ -46,8 +46,8 @@ const MainGallery = () => {
     {
       name: "Bpis-students-cheerful",
       pic: slider3.src,
-      toptext: "Inspiring Powerful Actions on ",
-      schoolname: true,
+      toptext: "Empowering Students for Excellence ",
+      schoolname: false,
       main: false,
       bottext: "Positive behavioral supports is a behavior management system.",
       id: 2,

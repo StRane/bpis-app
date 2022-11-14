@@ -15,8 +15,7 @@ const Footer = () => {
           alt="BPIS secondary logo"
         />
         <p className="text-xs md:text-base leading-8 text-bpisgry2 tracking-wider">
-          Burapa Pattanasart International School is &#x2018;A progressive
-          School with an empowered student body&#x2019;.
+          Burapa Pattanasart International School is &#x2018;an affordable International school, striving to achieve high standards of academic performance through continuous improvement to inspire excellence in students.
         </p>
       </div>
       <div className="col-span-1">
@@ -37,17 +36,6 @@ const Footer = () => {
           </li>
           <li className="hover:text-bpisg transition-colors duration-200 ease-in">
             <Link
-              href="https://www.instagram.com/burapa_international_school/"
-              passHref
-              legacyBehavior
-            >
-              <a target="_blank" aria-label="bpis instagram page">
-                Instagram
-              </a>
-            </Link>
-          </li>
-          <li className="hover:text-bpisg transition-colors duration-200 ease-in">
-            <Link
               href="https://twitter.com/bpisofficial?lang=en"
               passHref
               legacyBehavior
@@ -57,11 +45,22 @@ const Footer = () => {
               </a>
             </Link>
           </li>
+          <li className="hover:text-bpisg transition-colors duration-200 ease-in">
+            <Link
+              href="https://www.instagram.com/bpis_international/"
+              passHref
+              legacyBehavior
+            >
+              <a target="_blank" aria-label="bpis instagram page">
+                Instagram
+              </a>
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="col-span-1">
         <h3 className="text-sm lg:text-lg leading-8 mb-10 text-white relative tracking-wider uppercase after:content-[''] after:w-10 after:bg-gray-400 after:h-[1px] after:absolute after:left-0 after:top-12">
-          Connect Us
+          Contact Us
         </h3>
         <ul className="tracking-wider space-y-2 leading-8 text-bpisgry2 text-xs lg:text-base">
           <li className="flex items-center">
