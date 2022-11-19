@@ -26,7 +26,7 @@ const SocialMedia = () => {
           </a>
         </Link>
         <Link
-          href="https://twitter.com/bpisofficial?lang=en"
+          href="https://twitter.com/BpisThailand?t=9iz0la-r25fImZcVBqRAaA&s=06"
           passHref
           legacyBehavior
         >

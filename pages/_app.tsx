@@ -14,7 +14,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }
 
   if (typeof window === "undefined") {
-    return <></>;
+    console.log('yarrak')
+    return <div>Yarrak</div>;
   } else {
     return (
       <MediaProvider>

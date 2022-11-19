@@ -22,17 +22,21 @@ const News = () => {
     <ul className="divide-y text-left">
       {latestNews.map((item) => (
         <li key={item.id} className="mb-7 pt-7">
-        <Link  href={"/activities/" + item.id} key={item.id} className="mb-7 pt-7">
-          <h5 className="text-black hover:text-bpisg text-lg font-normal transition-colors duration-300 mb-2">
-            {item.title}
-          </h5>
-          <div className="flex text-bpisgry">
-            <HiOutlineCalendar className="h-5 w-5 mr-4 self-center" />
-            <p>
-              {item.month} {item.day}, 2019
-            </p>
-          </div>
-        </Link>
+          <Link
+            href={"/activities/" + item.id}
+            key={item.id}
+            className="mb-7 pt-7"
+          >
+            <h5 className="text-black hover:text-bpisg text-lg font-normal transition-colors duration-300 mb-2">
+              {item.title}
+            </h5>
+            <div className="flex text-bpisgry">
+              <HiOutlineCalendar className="h-5 w-5 mr-4 self-center" />
+              <p>
+                {item.month} {item.day}, {item.year}
+              </p>
+            </div>
+          </Link>
         </li>
       ))}
     </ul>
@@ -41,24 +45,33 @@ const News = () => {
   return (
     <div className="col-start-1 col-end-13 grid grid-cols-1 self-center lg:grid-cols-3 gap-6 mb-48">
       <div className="col-span-1 mb-8 px-5">
-        <h3 className="mb-7 text-4xl font-semibold pb-4 text-left">
-          Final Exams <span className="text-bpisgcontrast">Term 2</span>
+        <h3 className="mb-7 text-4xl font-semibold text-left">
+          Upcoming Events at <span className="text-bpisgcontrast">BPIS</span>
         </h3>
-        <p className="text-lg mb-4 text-bpisgry leading-7 text-left">
-          In order for a student to sit for final examinations, he/she must be
-          in good standing.
-        </p>
-        <ul className="list-disc list-inside text-lg font-normal space-y-1 marker:text-bpisg leading-7 text-left mb-10">
-          <li>Monday, 22 April 2019</li>
-          <li>9am &#8211; 4pm</li>
-          <li>Burapa Pattanasart International School</li>
+        <ul className="marker:text-bpisg list-decimal pl-5">
+          <li className="text-lg mb-4  leading-7 text-left">
+            Science Exhibition Key Stage 4 (Year 10 & Year 11)
+          </li>
+          <div className="text-md font-normal space-y-1 marker:text-bpisg leading-7 text-left mb-10 text-bpisgry">
+            <p>Friday, 25 November 2022</p>
+            <p>9am &#8211; 4pm</p>
+          </div>
+          <li className="text-lg mb-4  leading-7 text-left">
+            School Trip to Burapha University.
+          </li>
+          <div className="text-md font-normal space-y-1 leading-7 text-left mb-10 text-bpisgry">
+            <p>Friday, 2 December 2022</p>
+            <p>9am &#8211; 4pm</p>
+          </div>
         </ul>
-        <button
-          aria-label="opan calendar page"
-          className="items-center text-base w-1/2 h-12 self-center leading-10 justify-self-center font-normal uppercase border-solid border rounded-3xl hover:text-white bg-bpisg hover:bg-bpisg2 hover:border-bpisg2"
-        >
-          <Link href="/schedule">Schedule</Link>
-        </button>
+        <Link href="/schedule" className="w-full h-full">
+          <button
+            aria-label="opan calendar page"
+            className="items-center text-base w-1/2 h-12 self-center leading-10 justify-self-center font-normal uppercase border-solid border rounded-3xl hover:text-white bg-bpisg hover:bg-bpisg2 hover:border-bpisg2"
+          >
+            Schedule
+          </button>
+        </Link>
       </div>
 
       <div className="col-span-1 self-center">

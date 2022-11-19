@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Image from "next/image";
 import Head from "next/head";
 import Footer from "../components/UI/footer/Footer";
 
@@ -8,6 +9,8 @@ import NavigationHelper from "../components/UI/pagelayouts/NavigationHelper";
 
 import SideInfos from "../components/UI/pagelayouts/SideInfos";
 import Pagetitle from "../components/UI/pagelayouts/Pagetitle";
+
+import image1 from '../images/history_page/bpis_drone.webp'
 
 const History: NextPage = () => {
   return (
@@ -22,21 +25,11 @@ const History: NextPage = () => {
         <Pagetitle name="our history" />
         <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
           <NavigationHelper name="Our History" />
-          <div className="py-16 col-span-3 space-y-4">
+          <div className="py-16 col-span-4 lg:col-span-3 space-y-4">
             <p>
               BPIS developed out of the established English/Bi-lingual
               (Thai-English) programme of Burapa English Programme School of
-              Thailand (BEST) which has operated for over 20 years.
-            </p>
-            <p>
-              In line with the policies of the National Economics and Social
-              Development Board of 2015, by which time Thailand had become a
-              leading member of the ASEAN Economic Community – a significant
-              project to drive Thai economic and industrial expansion in the
-              Eastern Seaboard Area, the School Board of Directors unanimously
-              agreed to establish an International School to support South
-              Pattaya location where there was a growing community of foreign
-              families.
+              Thailand (BEST) which has been operating for over 20 years.
             </p>
             <p>
               BPIS established a secondary education structure founded on the UK
@@ -45,6 +38,9 @@ const History: NextPage = () => {
               received the licence as a new International School on March 9th
               2018. It commenced the first academic year on August 20th 2018.
             </p>
+            <div className="relative min-w-full min-h-[400px] lg:min-h-[600px]">
+            <Image src={image1.src} fill alt="BPIS school drone image" className="object-contain"/>
+            </div>
             <p>
               BPIS is a young International School proud of the collaborative
               work between the Student Council Members and the Academic Team,
@@ -55,9 +51,14 @@ const History: NextPage = () => {
               discrimination.
             </p>
             <p>
-              Teachers from Key Stage 3-5 are able to follow an international
-              curriculum and course outlines and lesson plans are all based on
-              the IGCSE Schemes of Work per subject.
+              In line with the policies of the National Economics and Social
+              Development Board of 2015, by which time Thailand had become a
+              leading member of the ASEAN Economic Community – a significant
+              project to drive Thai economic and industrial expansion in the
+              Eastern Seaboard Area, the School Board of Directors unanimously
+              agreed to establish an International School to support South
+              Pattaya location where there was a growing community of foreign
+              families.
             </p>
           </div>
           <SideInfos />

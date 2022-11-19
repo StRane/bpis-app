@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
       <div className="col-span-1">
         <h3 className="text-sm md:text-lg leading-8 mb-10 text-white relative tracking-wider uppercase after:content-[''] after:w-10 after:bg-gray-400 after:h-[1px] after:absolute after:left-0 after:top-12">
-          Social
+          Social Media
         </h3>
         <ul className="grid grid-cols-3 md:grid-cols-2 tracking-wider leading-8 text-bpisgry2 text-xs lg:text-base pb-5">
           <li className="hover:text-bpisg transition-colors duration-200 ease-in">
@@ -36,7 +36,7 @@ const Footer = () => {
           </li>
           <li className="hover:text-bpisg transition-colors duration-200 ease-in">
             <Link
-              href="https://twitter.com/bpisofficial?lang=en"
+              href="https://twitter.com/BpisThailand?t=9iz0la-r25fImZcVBqRAaA&s=06"
               passHref
               legacyBehavior
             >

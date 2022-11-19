@@ -10,7 +10,6 @@ import EventCard from "../../components/UI/newsEventsPage/EventCard";
 
 import NavigationHelper from "../../components/UI/pagelayouts/NavigationHelper"
 
-import SideInfos from "../../components/UI/pagelayouts/SideInfos";
 import Pagetitle from "../../components/UI/pagelayouts/Pagetitle";
 
 const Activities: NextPage = () => {
@@ -48,8 +47,7 @@ const Activities: NextPage = () => {
         <Pagetitle name="Activities" />
       <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
         <NavigationHelper name="Activities" />
-        <div className="py-16 col-span-3 space-y-4 mx-4">{displayedItems}</div>
-        <SideInfos />
+        <div className="py-16 col-span-4 space-y-4 mx-4">{displayedItems}</div>
       </div>
       </main>
       <footer>

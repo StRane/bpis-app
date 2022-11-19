@@ -8,8 +8,9 @@ type media = {
   month: string;
   adress: string;
   adresssm: string;
-  eventDetails?:string,
+  eventDetails?:string;
   id:number;
+  year:number;
 };
 
 const MediaContext = createContext<{activities:media[];}>({

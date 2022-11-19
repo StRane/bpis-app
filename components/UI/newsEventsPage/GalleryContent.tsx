@@ -13,7 +13,7 @@ const GalleryContent = ({main}: Props) => {
 
   const activities = mediCtx.activities;
 
-  const mediaContent = main? [...activities].slice(1,7): [...activities];
+  const mediaContent = main? [...activities].slice(0,6): [...activities];
 
 
   const gallery = mediaContent.map((item) => (

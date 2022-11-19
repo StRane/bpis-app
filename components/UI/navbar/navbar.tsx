@@ -20,6 +20,7 @@ const NavBar = () => {
       submenu: [
         { title: "Our History", adress: "/history" },
         { title: "Our Vision and Mission", adress: "/vision" },
+        { title: "Our Core Values", adress: "/core" },
         { title: "Achievements", adress: "/achievements" },
       ],
     },
