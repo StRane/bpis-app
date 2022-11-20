@@ -99,7 +99,7 @@ const GalleryContent = (props: Props) => {
                     ...animation,
                   }}
                 >
-                  <Link href="/vision" className="h-full w-full">Learn More</Link>
+                  <Link href="/about-BPIS/vision" className="h-full w-full">Learn More</Link>
                 </a.button>
               );
             })}

@@ -25,7 +25,7 @@ const Achievements: NextPage = () => {
         <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-[3fr_4fr_4fr_4fr] gap-4">
           <NavigationHelper name="Achievements" />
           <LeftSideBar />
-          <div className="py-16 col-span-4 lg:col-span-2 space-y-4">BPIS achievements</div>
+          <div className="p-16 col-span-4 lg:col-span-2 space-y-4">BPIS achievements</div>
           <SideInfos />
         </div>
       </main>
