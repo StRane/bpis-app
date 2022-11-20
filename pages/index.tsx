@@ -17,7 +17,10 @@ const Home: NextPage = () => {
       <Head>
         <title>BPIS</title>
         <link rel="icon" href="/bpis_logo.ico" />
-        <meta name="description" content="Burapa Pattanasart International School website main page gives general idea about school"/>
+        <meta
+          name="description"
+          content="Burapa Pattanasart International School website main page gives general idea about school"
+        />
       </Head>
 
       <main>
@@ -31,7 +34,6 @@ const Home: NextPage = () => {
         <Exams />
         <Stages />
       </main>
-
       <footer>
         <Footer />
       </footer>

@@ -51,7 +51,7 @@ const Activities: NextPage = () => {
       </div>
       </main>
       <footer>
-        <Footer main={true}/>
+        <Footer/>
       </footer>
     </>
   );
