@@ -1,5 +1,8 @@
 import useWindowDimensions from "../../helper/WindowDimensions";
-import { useState } from "react";
+import { useState,useContext } from "react";
+import MediaContext from "../../../store/media-context";
+
+
 
 import NavMenu from "./MenuItem";
 
@@ -12,58 +15,11 @@ const NavBar = () => {
     target?: string;
   };
 
-  const [menuItems, setMenuItems] = useState<menuitem[]>([
-    {
-      name: "About BPIS",
-      id: 0,
-      hovering: false,
-      submenu: [
-        { title: "Our History", adress: "/history" },
-        { title: "Our Vision and Mission", adress: "/vision" },
-        { title: "Our Core Values", adress: "/core" },
-        { title: "Achievements", adress: "/achievements" },
-      ],
-    },
-    {
-      name: "Admissions",
-      id: 1,
-      hovering: false,
-      submenu: [
-        { title: "School Fees", adress: "/school-fees" },
-        { title: "Procedure", adress: "/procedure" },
-      ],
-    },
-    {
-      name: "Academics",
-      id: 2,
-      hovering: false,
-      submenu: [
-        { title: "Yr. 7-9 (Key Stage3)", adress: "/yr7-9-program" },
-        { title: "Yr. 10-11 (IGCSE)", adress: "/yr10-11-program" },
-        { title: "Yr. 12-13 (A-Level)", adress: "/yr12-13-program" },
-      ],
-    },
-    {
-      name: "Connect",
-      id: 3,
-      hovering: false,
-      submenu: [
-        { title: "Activities", adress: "/activities" },
-        { title: "Gallery", adress: "/gallery" },
-        { title: "School Magazine", adress: "/school-magazine" },
-      ],
-    },
-    {
-      name: "Schedule",
-      id: 4,
-      target: "/schedule",
-    },
-    {
-      name: "Contact Us",
-      id: 5,
-      target: "/contact-us",
-    },
-  ]);
+  const mediCtx = useContext(MediaContext);
+
+  const menu = mediCtx.menuitem;
+
+  const [menuItems, setMenuItems] = useState<menuitem[]>(menu);
 
   const itemActivationHandler = (id: number) => {
     const newMenu = [...menuItems];

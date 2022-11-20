@@ -140,6 +140,59 @@ const MediaProvider = (props: any) => {
         year: 2019
       },
     ],
+    menuitem:[
+      {
+        name: "About BPIS",
+        id: 0,
+        hovering: false,
+        submenu: [
+          { title: "Our History", adress: "/about-BPIS/history" },
+          { title: "Our Vision and Mission", adress: "/about-BPIS/vision" },
+          { title: "Our Core Values", adress: "/about-BPIS/core" },
+          { title: "Achievements", adress: "/about-BPIS/achievements" },
+        ],
+      },
+      {
+        name: "Admissions",
+        id: 1,
+        hovering: false,
+        submenu: [
+          { title: "School Fees", adress: "/admissions/school-fees" },
+          { title: "Procedure", adress: "/admissions/procedure" },
+        ],
+      },
+      {
+        name: "Academics",
+        id: 2,
+        hovering: false,
+        target:"/academics",
+        submenu: [
+          { title: "Yr. 7-9 (Key Stage3)", adress: "/academics/yr7-9-program" },
+          { title: "Yr. 10-11 (IGCSE)", adress: "/academics/yr10-11-program" },
+          { title: "Yr. 12-13 (A-Level)", adress: "/academics/yr12-13-program" },
+        ],
+      },
+      {
+        name: "Connect",
+        id: 3,
+        hovering: false,
+        submenu: [
+          { title: "Activities", adress: "/activities" },
+          { title: "Gallery", adress: "/gallery" },
+          { title: "School Magazine", adress: "/school-magazine" },
+        ],
+      },
+      {
+        name: "Schedule",
+        id: 4,
+        target: "/schedule",
+      },
+      {
+        name: "Contact Us",
+        id: 5,
+        target: "/contact-us",
+      },
+    ]
   };
 
   return (

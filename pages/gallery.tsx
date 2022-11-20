@@ -20,10 +20,10 @@ const Gallery: NextPage = () => {
       <main>
         <NavBar />
         <Pagetitle name="Gallery" />
-        <div className="xl:m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
+        <div className="col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4">
           <NavigationHelper name="Gallery" />
           <div
-            className='col-span-12 lg:mx-2 pt-5 mb-60 md:mb-10 grid lg:gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-screen w-screen'
+            className='col-span-12 pt-5 mb-60 md:mb-10 grid lg:gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-screen w-screen'
           >
             <GalleryContent />
           </div>

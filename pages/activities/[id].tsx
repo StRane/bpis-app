@@ -35,8 +35,6 @@ const Details = () => {
     return console.log("there is an error in your activity fetch");
   }
 
-  console.log(currActivity);
-
   return (
     <>
       <Head>

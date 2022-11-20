@@ -1,16 +1,18 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
-import Footer from "../components/UI/footer/Footer";
+import Footer from "../../components/UI/footer/Footer";
 
-import NavBar from "../components/UI/navbar/navbar";
+import NavBar from "../../components/UI/navbar/navbar";
 
-import NavigationHelper from "../components/UI/pagelayouts/NavigationHelper";
+import NavigationHelper from "../../components/UI/pagelayouts/NavigationHelper";
 
-import SideInfos from "../components/UI/pagelayouts/SideInfos";
-import Pagetitle from "../components/UI/pagelayouts/Pagetitle";
+import SideInfos from "../../components/UI/pagelayouts/SideInfos";
+import Pagetitle from "../../components/UI/pagelayouts/Pagetitle";
 
-import image1 from '../images/history_page/bpis_drone.webp'
+import image1 from '../../images/history_page/bpis_drone.webp'
+
+import LeftSideBar from "../../components/UI/pagelayouts/LeftSideBar";
 
 const History: NextPage = () => {
   return (
@@ -23,9 +25,9 @@ const History: NextPage = () => {
       <main>
         <NavBar />
         <Pagetitle name="our history" />
-        <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
-          <NavigationHelper name="Our History" />
-          <div className="py-16 col-span-4 lg:col-span-3 space-y-4">
+        <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-[3fr_4fr_4fr_4fr] gap-4">
+          <NavigationHelper name="Our History" /><LeftSideBar />
+          <div className="py-16 col-span-4 lg:col-span-2 space-y-4">
             <p>
               BPIS developed out of the established English/Bi-lingual
               (Thai-English) programme of Burapa English Programme School of

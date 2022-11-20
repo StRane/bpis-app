@@ -13,8 +13,15 @@ type media = {
   year:number;
 };
 
-const MediaContext = createContext<{activities:media[];}>({
-  activities: [],
+type menuitem = {
+  name: string;
+    id: number;
+    hovering?: boolean;
+    submenu?: { title: string; adress: string }[];
+    target?: string;}
+
+const MediaContext = createContext<{activities:media[];menuitem:menuitem[]}>({
+  activities: [], menuitem:[]
 });
 
 export default MediaContext;
