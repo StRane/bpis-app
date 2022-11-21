@@ -149,9 +149,9 @@ const NavMenu: React.FC<{
       {props.type === "mobile" && !showMenu ? (
         <></>
       ) : (
-        <div>
-          <Link href="/">HOME</Link>
-          <div className={currentListTheme.mainListStyle}>
+        <div className={currentListTheme.mainListStyle}>
+          {props.type === "mobile" && <div className="text-center"><Link  href="/">HOME</Link></div>}
+          
             {props.content.map((item) => (
               <ul
                 onMouseEnter={
@@ -220,7 +220,7 @@ const NavMenu: React.FC<{
                 )}
               </ul>
             ))}
-          </div>
+          
         </div>
       )}
     </nav>
