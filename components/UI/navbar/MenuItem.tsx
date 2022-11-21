@@ -149,75 +149,78 @@ const NavMenu: React.FC<{
       {props.type === "mobile" && !showMenu ? (
         <></>
       ) : (
-        <div className={currentListTheme.mainListStyle}>
-          {props.content.map((item) => (
-            <ul
-              onMouseEnter={
-                props.type === "desktop"
-                  ? () => props.isActive(item.id)
-                  : undefined
-              }
-              onMouseLeave={
-                props.type === "desktop"
-                  ? () => props.isActive(item.id)
-                  : undefined
-              }
-              onClick={
-                props.type === "mobile"
-                  ? () => props.isActive(item.id)
-                  : undefined
-              }
-              className="text-center align-center w-full"
-              key={`navItem_${props.type}__${item.id}`}
-            >
-              <li
-                className={currentListTheme.listItemBehavior}
-                key={`navItem__${item.id}`}
+        <div>
+          <Link href="/">HOME</Link>
+          <div className={currentListTheme.mainListStyle}>
+            {props.content.map((item) => (
+              <ul
+                onMouseEnter={
+                  props.type === "desktop"
+                    ? () => props.isActive(item.id)
+                    : undefined
+                }
+                onMouseLeave={
+                  props.type === "desktop"
+                    ? () => props.isActive(item.id)
+                    : undefined
+                }
+                onClick={
+                  props.type === "mobile"
+                    ? () => props.isActive(item.id)
+                    : undefined
+                }
+                className="text-center align-center w-full"
+                key={`navItem_${props.type}__${item.id}`}
               >
-                {item.target ? (
-                  <Link href={item.target}>{item.name}</Link>
-                ) : (
-                  <>{item.name}</>
-                )}
-                {item.submenu ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    className="fill-current top-7 h-5 w-5 inline-block"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                ) : (
-                  <></>
-                )}
-              </li>
-              {item.submenu ? (
-                <>
-                  {item.hovering ? (
-                    <div className={currentListTheme.activeItemS}>
-                      {item.submenu.map((item, index) => (
-                        <Link
-                          href={item.adress}
-                          className={currentListTheme.subMenuStyle}
-                          key={`navItem__${props.type}__${index}`}
-                        >
-                          {item.title}
-                        </Link>
-                      ))}
-                    </div>
+                <li
+                  className={currentListTheme.listItemBehavior}
+                  key={`navItem__${item.id}`}
+                >
+                  {item.target ? (
+                    <Link href={item.target}>{item.name}</Link>
+                  ) : (
+                    <>{item.name}</>
+                  )}
+                  {item.submenu ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      className="fill-current top-7 h-5 w-5 inline-block"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
                   ) : (
                     <></>
                   )}
-                </>
-              ) : (
-                <></>
-              )}
-            </ul>
-          ))}
+                </li>
+                {item.submenu ? (
+                  <>
+                    {item.hovering ? (
+                      <div className={currentListTheme.activeItemS}>
+                        {item.submenu.map((item, index) => (
+                          <Link
+                            href={item.adress}
+                            className={currentListTheme.subMenuStyle}
+                            key={`navItem__${props.type}__${index}`}
+                          >
+                            {item.title}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <></>
+                    )}
+                  </>
+                ) : (
+                  <></>
+                )}
+              </ul>
+            ))}
+          </div>
         </div>
       )}
     </nav>
