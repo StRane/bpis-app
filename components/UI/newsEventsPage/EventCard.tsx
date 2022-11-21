@@ -14,7 +14,7 @@ const EventCard: React.FC<{
 }> = (props) => {
   const displayedItems = (
     <div className="mb-24">
-      <div className="relative min-h-screen min-w-screen">
+      <div className="relative min-h-[60vh] lg:min-h-screen min-w-screen">
         <Image src={props.adress} alt={props.name} fill  className="object-cover object-top
 "/>
       </div>
