@@ -10,17 +10,17 @@ const Stages = () => {
     {
       pic: Image1.src,
       text: "Key Stage 3 Admissions",
-      adress: "/yr7-9-program",
+      adress: "/academics/yr7-9-program",
     },
     {
       pic: Image2.src,
       text: "IGCSE Admissions",
-      adress: "/yr10-11-program",
+      adress: "/academics/yr10-11-program",
     },
     {
       pic: Image3.src,
       text: "A-Level Education",
-      adress: "/yr12-13-program",
+      adress: "/academics/yr12-13-program",
     },
   ];
 
