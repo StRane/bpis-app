@@ -15,7 +15,8 @@ const EventCard: React.FC<{
   const displayedItems = (
     <div className="mb-24">
       <div className="relative min-h-screen min-w-screen">
-        <Image src={props.adress} alt={props.name} fill  className="object-cover"/>
+        <Image src={props.adress} alt={props.name} fill  className="object-cover object-top
+"/>
       </div>
       <div className="w-full grid grid-cols-[2.5rem_1fr] md:grid-cols-[6rem_1fr] divide-x-1 mt-7">
         <div className="flex flex-col text-bpisg font-medium">
