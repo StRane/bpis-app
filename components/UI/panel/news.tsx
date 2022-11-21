@@ -21,7 +21,7 @@ const News = () => {
   const newsBoard = (
     <ul className="divide-y text-left">
       {latestNews.map((item) => (
-        <li key={item.id} className="mb-7 pt-7">
+        <li key={item.id} className="mb-7 pt-7 ml-5 lg:ml-0">
           <Link
             href={"/activities/" + item.id}
             key={item.id}
