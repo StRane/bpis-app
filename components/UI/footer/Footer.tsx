@@ -9,7 +9,7 @@ import Photo1 from "../../../images/footer/logo-footer.webp";
 
 const Footer = () => {
   return (
-    <div className='w-screen lg:px-10 translate-y-28 grid grid-cols-1 lg:grid-cols-3 lg:space-y-2 lg:gap-9  pl-3 bg-bpisb py-14'>
+    <div className='w-screen lg:px-10 lg:translate-y-28 grid grid-cols-1 lg:grid-cols-3 lg:space-y-2 lg:gap-9  pl-3 bg-bpisb py-14'>
       <div className="col-span-1 leading-8 mb-5">
         <img
           className="mb-10 h-10 w-[153px] mx-auto md:mx-0 translate-y-4"

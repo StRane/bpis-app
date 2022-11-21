@@ -45,9 +45,9 @@ const Activities: NextPage = () => {
       <main>
         <NavBar/>
         <Pagetitle name="Activities" />
-      <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
+      <div className="my-4 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
         <NavigationHelper name="Activities" />
-        <div className="py-16 col-span-4 space-y-4 mx-4">{displayedItems}</div>
+        <div className="py-16 col-span-4 space-y-4 md:mx-4">{displayedItems}</div>
       </div>
       </main>
       <footer>

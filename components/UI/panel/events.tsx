@@ -14,7 +14,7 @@ const Events = () => {
 
   const eventsGallery = (
     <div
-      className="grid grid-cols-2 grid-rows-2 mr-5 h-72 sm:px-5 md:px-40 lg:px-0
+      className="grid grid-cols-2 translate-x-2.5 md:translate-x-0 grid-rows-2 mr-5 h-72 sm:px-5 md:px-40 lg:px-0
  lg:h-[24.625rem] overflow-clip text-left"
     >
       <div className="relative">
@@ -67,7 +67,7 @@ const Events = () => {
 
   return (
     <div
-      className="col-span-12 w-screen h-screen items-center grid grid-cols-1 lg:grid-cols-2 divide-y-1 lg:divide-y-0 lg:divide-x-1 divide-dashed divide-bpisgry2 bg-cover  bg-center before:content-[''] before:absolute relative before:h-full before:w-screen before:left-0 before:top-0 before:bg-bpisshdw before:bg-cover"
+      className="col-span-12 w-screen h-[140vh] lg:h-screen items-center grid grid-cols-1 lg:grid-cols-2 divide-y-1 lg:divide-y-0 lg:divide-x-1 divide-dashed divide-bpisgry2 bg-cover bg-center before:content-[''] before:absolute relative before:min-h-full before:w-screen before:left-0 before:top-0 before:bg-bpisshdw before:bg-cover"
       style={{ backgroundImage: `url(${imageEvent.src})` }}
     >
       <div className="col-span-1 lg:mx-28 my-auto z-10">
@@ -89,7 +89,7 @@ const Events = () => {
         </div>
       </div>
       <div
-        className="col-span-1 z-10 pt-5
+        className="col-span-1 translate-x-0 z-10 pt-5
        lg:p-10"
       >
         <h3 className="text-white text-center lg:text-left font-bold tracking-wide text-lg lg:text-4xl pb-8">

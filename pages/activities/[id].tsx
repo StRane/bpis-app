@@ -48,7 +48,7 @@ const Details = () => {
 
         <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
           <NavigationHelper name="Details" />
-          <div className="py-16 col-span-3 space-y-4 list-none">
+          <div className="py-16 col-span-4 space-y-4 list-none">
             <EventCard
               name={currActivity.name}
               adress={currActivity.adress}

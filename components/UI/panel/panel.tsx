@@ -5,6 +5,7 @@ import {
   HiOutlineAcademicCap,
   HiOutlineClipboardList,
   HiArrowNarrowRight,
+  HiQuestionMarkCircle,
 } from "react-icons/hi";
 
 const Panel = () => {
@@ -12,17 +13,17 @@ const Panel = () => {
     {
       name: "Programs",
       subname: "21st Century Learners",
-      adress: "/yr7-9-program",
+      adress: "/academics/yr7-9-program",
     },
     {
       name: "Achievements",
       subname: "Academic success",
-      adress: "/achievements",
+      adress: "/about-BPIS/achievements",
     },
     {
       name: "Education Fees",
       subname: "School Fees",
-      adress: "/school-fees",
+      adress: "/admissions/school-fees",
     },
   ];
 
@@ -60,7 +61,7 @@ const Panel = () => {
           <HiOutlineClipboardList className="h-7 w-7 md:h-11 md:w-11 stroke-0 stroke-bpisgry align-center group-hover:stroke-bpisg" />
           <div className="md:ml-3 flex flex-col text-left self-start">
             <ul>
-            <li className="group-hover:text-bpisg">{panelitems[1].name}</li>
+              <li className="group-hover:text-bpisg">{panelitems[1].name}</li>
               <li className="font-light text-bpisgry">
                 {panelitems[1].subname}
               </li>
@@ -80,7 +81,7 @@ const Panel = () => {
           <HiOutlineMap className="h-7 w-7 md:h-11 md:w-11 stroke-0 stroke-bpisgry align-center group-hover:stroke-bpisg" />
           <div className="md:ml-3 flex flex-col text-left self-start">
             <ul>
-            <li className="group-hover:text-bpisg">{panelitems[2].name}</li>
+              <li className="group-hover:text-bpisg">{panelitems[2].name}</li>
               <li className="font-light text-bpisgry">
                 {panelitems[2].subname}
               </li>
@@ -98,8 +99,9 @@ const Panel = () => {
         href="/contact-us"
         className="col-span-1 w-full bg-bpisg text-white text-center lg:text-left p-0 lg:pt-9 lg:pr-5 lg:pb-8 relative md:before:content-[''] md:before:h-full before:absolute before:bg-bpisg lg:before:w-[4.6rem] before:top-0 before:-skew-x-12 before:translate-x-5 before:-left-20 flex before:block group text-xs lg:text-lg font-normal uppercase group-hover:text-bpisb"
       >
-        <div className="mx-auto lg:ml-4 lg:w-3/4 flex flex-col text-left top-0 lg:-top-5 after:content-[''] after:w-[1px] after:h-12 after:top-10 after:left-[70%] after:bg-white after:absolute">
-          <ul>
+        <div className="mx-auto lg:ml-4 lg:w-3/4 flex items-center md:text-left top-0 lg:-top-5 after:content-[''] after:w-[1px] after:h-12 after:top-10 after:left-[70%] after:bg-white after:absolute">
+        <HiQuestionMarkCircle className="h-7 w-7 md:hidden stroke-0 stroke-bpisgry align-center inline" />
+          <ul className="flex flex-col">         
             <li>Discover BPIS</li>
             <li className="font-light">Don't Hesitate to Ask</li>
           </ul>
