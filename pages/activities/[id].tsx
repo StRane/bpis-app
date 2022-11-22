@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
+import Router from "next/router";
 
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 import MediaContext from "../../store/media-context";
 
@@ -13,16 +14,17 @@ import NavBar from "../../components/UI/navbar/navbar";
 
 import NavigationHelper from "../../components/UI/pagelayouts/NavigationHelper";
 
-import SideInfos from "../../components/UI/pagelayouts/SideInfos";
 import Pagetitle from "../../components/UI/pagelayouts/Pagetitle";
 import EventCard from "../../components/UI/newsEventsPage/EventCard";
+import Custom404 from "../404";
 
-const Details = () => {
+const Details: NextPage = () => {
   const pageProps = useRouter();
   const pageNumber = pageProps.query!.id;
 
   if (!pageNumber) {
-    return console.log("there is an error in your page navigation");
+    Router.push('404');
+    return null
   }
 
   const mediaCtx = useContext(MediaContext);
@@ -32,7 +34,8 @@ const Details = () => {
   );
 
   if (!currActivity) {
-    return console.log("there is an error in your activity fetch");
+    Router.push('404')
+    return null;
   }
 
   return (
@@ -61,8 +64,6 @@ const Details = () => {
               directed={false}
             />
           </div>
-
-          <SideInfos />
         </div>
       </main>
       <footer>
