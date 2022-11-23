@@ -21,6 +21,7 @@ const Home: NextPage = () => {
           name="description"
           content="Burapa Pattanasart International School website main page gives general idea about school"
         />
+        <meta name="google-site-verification" content="2PT_SiS4V8WxhGd5NNYI3N7ofhzVPXWhCuu1tjsSwG0" />
       </Head>
 
       <main>

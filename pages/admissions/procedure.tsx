@@ -17,6 +17,7 @@ const Procedure: NextPage = () => {
         <title>Application Procedure</title>
         <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
+        <meta name="google-site-verification" content="2PT_SiS4V8WxhGd5NNYI3N7ofhzVPXWhCuu1tjsSwG0" />
       </Head>
       <main>
         <NavBar />
