@@ -14,8 +14,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }
 
   if (typeof window === "undefined") {
-    console.log('yarrak')
-    return <div>Yarrak</div>;
+    console.log('Could not react window object')
+    return <div>Whoops You need window to use that site!!</div>;
   } else {
     return (
       <MediaProvider>
