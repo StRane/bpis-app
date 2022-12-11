@@ -61,7 +61,7 @@ const News = () => {
           </li>
           <div className="text-md font-normal space-y-1 leading-7 text-left mb-10 text-bpisgry">
             <p>The administration office and the finance office will be working from Monday, 19th December to 23rd December 2022</p>
-            <p>Saturday, 24 December 2022 - Friday, 2 January 2023</p>
+            <p>Closed from Saturday, 24 December 2022 - Friday, 2 January 2023</p>
             <p>Office will re-open on 3rd January 2023</p>
           </div>
         </ul>
