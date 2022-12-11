@@ -50,18 +50,18 @@ const News = () => {
         </h3>
         <ul className="marker:text-bpisg list-decimal pl-5">
           <li className="text-lg mb-4  leading-7 text-left">
-            Science Exhibition Key Stage 4 (Year 10 & Year 11)
+            Term 1 Holidays for Students and Teachers
           </li>
           <div className="text-md font-normal space-y-1 marker:text-bpisg leading-7 text-left mb-10 text-bpisgry">
-            <p>Friday, 25 November 2022</p>
-            <p>9am &#8211; 4pm</p>
+            <p>Monday, 19 December 2022 - Friday, 6 January 2023</p>
+            <p>Term 2 will commence from 9th January 2023</p>
           </div>
           <li className="text-lg mb-4  leading-7 text-left">
-            School Trip to Burapha University.
+            School Administration office and Finance Office holiday schedule
           </li>
           <div className="text-md font-normal space-y-1 leading-7 text-left mb-10 text-bpisgry">
-            <p>Friday, 2 December 2022</p>
-            <p>9am &#8211; 4pm</p>
+            <p>Friday, 24 December 2022 - Friday, 2 January 2023</p>
+            <p>Office will re-open on 3rd January 2023</p>
           </div>
         </ul>
         <Link href="/schedule" className="w-full h-full">
