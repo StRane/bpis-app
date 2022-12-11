@@ -54,7 +54,7 @@ const News = () => {
           </li>
           <div className="text-md font-normal space-y-1 marker:text-bpisg leading-7 text-left mb-10 text-bpisgry">
             <p>Monday, 19 December 2022 - Friday, 6 January 2023</p>
-            <p>Term 2 will commence from 9th January 2023</p>
+            <p>Term 2 will commence on 9th January 2023</p>
           </div>
           <li className="text-lg mb-4  leading-7 text-left">
             School Administration Office and Finance Office holiday schedule
