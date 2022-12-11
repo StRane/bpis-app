@@ -57,10 +57,10 @@ const News = () => {
             <p>Term 2 will commence from 9th January 2023</p>
           </div>
           <li className="text-lg mb-4  leading-7 text-left">
-            School Administration office and Finance Office holiday schedule
+            School Administration Office and Finance Office holiday schedule
           </li>
           <div className="text-md font-normal space-y-1 leading-7 text-left mb-10 text-bpisgry">
-            <p>Friday, 24 December 2022 - Friday, 2 January 2023</p>
+            <p>Saturday, 24 December 2022 - Friday, 2 January 2023</p>
             <p>Office will re-open on 3rd January 2023</p>
           </div>
         </ul>
