@@ -50,19 +50,19 @@ const News = () => {
         </h3>
         <ul className="marker:text-bpisg list-decimal pl-5">
           <li className="text-lg mb-4  leading-7 text-left">
-            Term 1 Holidays for Students and Teachers
+            Teacher's Day 16th January 2023
           </li>
           <div className="text-md font-normal space-y-1 marker:text-bpisg leading-7 text-left mb-10 text-bpisgry">
-            <p>Monday, 19 December 2022 - Friday, 6 January 2023</p>
-            <p>Term 2 will commence on 9th January 2023</p>
+            <p>The school will be closed on the 16th January in celebration of Teacher's Day.</p>
+           
           </div>
           <li className="text-lg mb-4  leading-7 text-left">
-            School Administration Office and Finance Office holiday schedule
+            Report Cards and PTA
           </li>
           <div className="text-md font-normal space-y-1 leading-7 text-left mb-10 text-bpisgry">
-            <p>The administration office and the finance office will be working from Monday, 19th December to 23rd December 2022</p>
-            <p>Closed from Saturday, 24 December 2022 - Friday, 3 January 2023</p>
-            <p>Office will re-open on 4th January 2023</p>
+            <p>On 18th January 2023, from 13:00pm - 16:00pm,</p>
+            <p>the school is inviting all the parents to visit the school in order to collect</p>
+            <p>Term 1 report cards and participate in PTA.</p>
           </div>
         </ul>
         <Link href="/schedule" className="w-full h-full">
