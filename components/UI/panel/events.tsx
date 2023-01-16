@@ -29,7 +29,7 @@ const Events = () => {
         <Link href={"/activities/" + activities[0].id} key={activities[0].id}>
           <p>
             {activities[0].day}
-            {activities[0].month}, 2019
+            {activities[0].month}, 2023
           </p>
           <h5 className="text-black font-medium tracking-wide	text-lg mb-2 lg:mb-7 group-hover:text-bpisg transition-colors duration-100 ease-in">
             {activities[0].title}
@@ -44,7 +44,7 @@ const Events = () => {
         <Link href={"/activities/" + activities[1].id} key={activities[1].id}>
           <p className="text-white/40 text-sm">
             {activities[1].day}
-            {activities[1].month}, 2019
+            {activities[1].month}, 2022
           </p>
           <h5 className="text-white font-medium tracking-wide	text-lg mb-2 lg:mb-7 group-hover:text-bpisb transition-colors duration-100 ease-in">
             {activities[1].title}
