@@ -22,12 +22,24 @@ import Image9 from "../images/events_news/Loy_2022.jpg";
 import Image9sm from "../images/events_news/Loy_2022sm.webp";
 import Image10 from "../images/events_news/Sports_day.jpg";
 import Image10sm from "../images/events_news/Sports_daysm.jpg";
-
-
+import Image11 from "../images/events_news/teachersday.webp";
+import Image11sm from "../images/events_news/teachersday_300.webp";
 
 const MediaProvider = (props: any) => {
   const media = {
     activities: [
+      {
+        name: "activity11",
+        title: "Teacher's day",
+        day: "16",
+        month: "January",
+        adress: Image11.src,
+        adresssm: Image11sm.src,
+        eventDetails:
+          "National Teachers’ Day is a Thai holiday celebrated each year on January 16. On this day, students go out of their way to show their teachers ความเคารพ (khwaam khao-róp), or “respect.” It was\nGeneral Phiboonsongkram who first suggested the creation of Teachers’ Day in Thailand. He spoke on the topic with teachers, the mass media got involved in promoting the holiday’s implementation, and the National Cabinet made it an official holiday in 1956. The first celebration took place the next year in 1957.\nThis holiday is rooted in the belief that teachers are some of the most valuable contributors to society and, as such, deserve to be recognized and appreciated for their devotion. This extends not only to school teachers but to teachers in any field of life\nCelebration of Teacher's Day is important because it gives us an opportunity to appreciate the teachers who have contributed to our life through education.",
+        id: 11,
+        year: 2023,
+      },
       {
         name: "activity10",
         title: "Student Council Inauguration",
@@ -36,27 +48,28 @@ const MediaProvider = (props: any) => {
         adress: Image8.src,
         adresssm: Image8sm.src,
         id: 10,
-        year: 2022
+        year: 2022,
       },
+
       {
         name: "activity9",
-        title: "Loy Krathong fashion show 2022",
-        day: "03",
-        month: "April",
-        adress: Image9.src,
-        adresssm: Image9sm.src,
-        id: 9,
-        year: 2022
-      },
-      {
-        name: "activity8",
         title: "Sports day team competition",
         day: "03",
         month: "April",
         adress: Image10.src,
         adresssm: Image10sm.src,
         id: 8,
-        year: 2022
+        year: 2022,
+      },
+      {
+        name: "activity8",
+        title: "Loy Krathong fashion show 2022",
+        day: "03",
+        month: "April",
+        adress: Image9.src,
+        adresssm: Image9sm.src,
+        id: 9,
+        year: 2022,
       },
       {
         name: "activity7",
@@ -66,7 +79,7 @@ const MediaProvider = (props: any) => {
         adress: Image1.src,
         adresssm: Image1sm.src,
         id: 7,
-        year: 2022
+        year: 2022,
       },
       {
         name: "activity6",
@@ -78,7 +91,7 @@ const MediaProvider = (props: any) => {
         adress: Image3.src,
         adresssm: Image3sm.src,
         id: 6,
-        year: 2019
+        year: 2019,
       },
       {
         name: "activity5",
@@ -89,7 +102,7 @@ const MediaProvider = (props: any) => {
         adress: Image2.src,
         adresssm: Image2sm.src,
         id: 5,
-        year: 2019
+        year: 2019,
       },
       {
         name: "activity4",
@@ -101,7 +114,7 @@ const MediaProvider = (props: any) => {
         adress: Image4.src,
         adresssm: Image4sm.src,
         id: 4,
-        year: 2019
+        year: 2019,
       },
       {
         name: "activity3",
@@ -113,7 +126,7 @@ const MediaProvider = (props: any) => {
         adress: Image5.src,
         adresssm: Image5sm.src,
         id: 3,
-        year: 2019
+        year: 2019,
       },
       {
         name: "activity2",
@@ -125,7 +138,7 @@ const MediaProvider = (props: any) => {
         adress: Image6.src,
         adresssm: Image6sm.src,
         id: 2,
-        year: 2019
+        year: 2019,
       },
       {
         name: "activity1",
@@ -137,10 +150,10 @@ const MediaProvider = (props: any) => {
         adress: Image7.src,
         adresssm: Image7sm.src,
         id: 1,
-        year: 2019
+        year: 2019,
       },
     ],
-    menuitem:[
+    menuitem: [
       {
         name: "About BPIS",
         id: 0,
@@ -165,11 +178,14 @@ const MediaProvider = (props: any) => {
         name: "Academics",
         id: 2,
         hovering: false,
-        target:"/academics",
+        target: "/academics",
         submenu: [
           { title: "Yr. 7-9 (Key Stage3)", adress: "/academics/yr7-9-program" },
           { title: "Yr. 10-11 (IGCSE)", adress: "/academics/yr10-11-program" },
-          { title: "Yr. 12-13 (A-Level)", adress: "/academics/yr12-13-program" },
+          {
+            title: "Yr. 12-13 (A-Level)",
+            adress: "/academics/yr12-13-program",
+          },
         ],
       },
       {
@@ -192,7 +208,7 @@ const MediaProvider = (props: any) => {
         id: 5,
         target: "/contact-us",
       },
-    ]
+    ],
   };
 
   return (
