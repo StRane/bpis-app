@@ -18,7 +18,7 @@ const SideInfos = () => {
           />
           <div className="flex flex-col text-sm font-bold pr-8">
             <h5 className="mb-5">{item.title}</h5>
-            <p className="text-bpisgry">{item.day} {item.month} 2019</p>
+            <p className="text-bpisgry">{item.day} {item.month} {item.year}</p>
           </div>
         </li>
       ))}

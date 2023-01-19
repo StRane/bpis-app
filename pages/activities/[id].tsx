@@ -47,7 +47,7 @@ const Details: NextPage = () => {
       </Head>
       <main>
         <NavBar />
-        <Pagetitle name={"Details" + currActivity.id} />
+        <Pagetitle name={currActivity.title} />
 
         <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-4 gap-9">
           <NavigationHelper name="Details" />
@@ -62,6 +62,7 @@ const Details: NextPage = () => {
               id={currActivity.id}
               eventDetails={currActivity.eventDetails}
               directed={false}
+              detailed={true}
             />
           </div>
         </div>

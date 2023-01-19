@@ -43,8 +43,8 @@ const News = () => {
   );
 
   return (
-    <div className="col-start-1 col-end-13 grid grid-cols-1 self-center lg:grid-cols-3 gap-6 mb-48">
-      <div className="col-span-1 mb-8 px-5">
+    <div className="col-start-1 col-end-13 grid grid-cols-1 self-center lg:grid-cols-8 gap-6 mb-48">
+      <div className="col-span-3 mb-8 px-5">
         <h3 className="mb-7 text-4xl font-semibold text-left">
           Upcoming Events at <span className="text-bpisgcontrast">BPIS</span>
         </h3>
@@ -75,7 +75,7 @@ const News = () => {
         </Link>
       </div>
 
-      <div className="col-span-1 self-center">
+      <div className="col-span-2 self-center obj">
         {shown ? (
           <div
             className="fixed top-0 left-0 w-full h-full bg-black/90"
@@ -89,7 +89,7 @@ const News = () => {
             />
           </div>
         ) : (
-          <div className="relative">
+          <div className="relative object-cover">
             <button
               aria-label="open school introduction video"
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-bpisg/80 rounded-full p-5 hover:bg-bpisg transition-colors duration-300"
@@ -108,14 +108,14 @@ const News = () => {
               </svg>
             </button>
             <img
-              className="mx-auto lg:mx-0"
+              className="w-full"
               src={Image1.src}
               alt="Youtube video"
             />
           </div>
         )}
       </div>
-      <div className="col-span-1 mb-8">
+      <div className="col-span-3 mb-8">
         <h3 className="tracking-wide font-semibold text-4xl pb-3">
           Latest
           <span className="text-bpisgcontrast"> News</span>

@@ -11,12 +11,18 @@ const EventCard: React.FC<{
   eventDetails?: string;
   id: number;
   directed?: boolean;
+  detailed?: boolean;
 }> = (props) => {
   const displayedItems = (
     <div className="mb-24">
       <div className="relative min-h-[60vh] lg:min-h-screen min-w-screen">
-        <Image src={props.adress} alt={props.name} fill  className="object-cover object-top
-"/>
+        <Image
+          src={props.adress}
+          alt={props.name}
+          fill
+          className="object-cover object-top
+"
+        />
       </div>
       <div className="w-full grid grid-cols-[2.5rem_1fr] md:grid-cols-[6rem_1fr] divide-x-1 mt-7">
         <div className="flex flex-col text-bpisg font-medium">
@@ -30,16 +36,25 @@ const EventCard: React.FC<{
           <div className="grid grid-cols-[6rem_6rem_1fr] divide-x-1 text-sm font-medium">
             <div className="justify-self-center text-xs lg:text-base">
               <h4>Posted by</h4>
-              <p className="text-xs lg:text-base uppercase text-black/60">Admin</p>
+              <p className="text-xs lg:text-base uppercase text-black/60">
+                Admin
+              </p>
             </div>
             <div className="pl-10">
               <h4 className="text-xs lg:text-base">Categories</h4>
-              <p className="uppercase text-black/60 text-xs lg:text-base">{props.type}</p>
+              <p className="uppercase text-black/60 text-xs lg:text-base">
+                {props.type}
+              </p>
             </div>
           </div>
         </div>
       </div>
-      {props.eventDetails && <p className="my-7">{props.eventDetails}</p>}
+      {props.eventDetails &&
+        (props.detailed ? (
+          <p className="my-7">{props.eventDetails}</p>
+        ) : (
+          <p className="my-7 truncate">{props.eventDetails}</p>
+        ))}
       {props.directed && (
         <Link href={"/activities/" + props.id} key={props.id}>
           <button className="uppercase px-5 py-3 bg-bpisg text-white hover:bg-bpisg2 font-bold text-sm transition duration-300 ease-in">
