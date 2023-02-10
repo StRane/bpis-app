@@ -52,6 +52,7 @@ const News = () => {
           <li className="text-lg mb-4  leading-7 text-left">Mid Term Break</li>
           <div className="text-md font-normal space-y-1 marker:text-bpisg leading-7 text-left mb-10 text-bpisgry">
             <p>The school will be closed from Mon,13th to Fri,17th Feb February.</p>
+            <p>Admin and finance offices will stay open and operate during this period.</p>
           </div>
           <li className="text-lg mb-4  leading-7 text-left">
             Teacher's Day 16th January 2023
