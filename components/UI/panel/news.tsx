@@ -49,20 +49,18 @@ const News = () => {
           Upcoming Events at <span className="text-bpisgcontrast">BPIS</span>
         </h3>
         <ul className="marker:text-bpisg list-decimal pl-5">
+          <li className="text-lg mb-4  leading-7 text-left">Mid Term Break</li>
+          <div className="text-md font-normal space-y-1 marker:text-bpisg leading-7 text-left mb-10 text-bpisgry">
+            <p>The school will be closed from Mon,13th to Fri,17th Feb February.</p>
+          </div>
           <li className="text-lg mb-4  leading-7 text-left">
             Teacher's Day 16th January 2023
           </li>
-          <div className="text-md font-normal space-y-1 marker:text-bpisg leading-7 text-left mb-10 text-bpisgry">
-            <p>The school will be closed on the 16th January in celebration of Teacher's Day.</p>
-           
-          </div>
-          <li className="text-lg mb-4  leading-7 text-left">
-            Report Cards and PTA
-          </li>
           <div className="text-md font-normal space-y-1 leading-7 text-left mb-10 text-bpisgry">
-            <p>On 18th January 2023, from 13:00pm - 16:00pm,</p>
-            <p>the school is inviting all the parents to visit the school in order to collect</p>
-            <p>Term 1 report cards and participate in PTA.</p>
+            <p>
+              The school will be closed on the 16th January in celebration of
+              Teacher's Day.
+            </p>
           </div>
         </ul>
         <Link href="/schedule" className="w-full h-full">
@@ -107,11 +105,7 @@ const News = () => {
                 />
               </svg>
             </button>
-            <img
-              className="w-full"
-              src={Image1.src}
-              alt="Youtube video"
-            />
+            <img className="w-full" src={Image1.src} alt="Youtube video" />
           </div>
         )}
       </div>

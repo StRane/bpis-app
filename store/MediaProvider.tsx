@@ -163,6 +163,7 @@ const MediaProvider = (props: any) => {
           { title: "Our Vision and Mission", adress: "/about-BPIS/vision" },
           { title: "Our Core Values", adress: "/about-BPIS/core" },
           { title: "Achievements", adress: "/about-BPIS/achievements" },
+          { title: "Career", adress: "/about-BPIS/career" },
         ],
       },
       {
