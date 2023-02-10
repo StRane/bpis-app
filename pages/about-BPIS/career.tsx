@@ -14,19 +14,19 @@ import Pagetitle from "../../components/UI/pagelayouts/Pagetitle";
 
 import LeftSideBar from "../../components/UI/pagelayouts/LeftSideBar";
 
-const Achievements: NextPage = () => {
+const Career: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Achievements</title>
+        <title>Career</title>
         <link rel="icon" href="/bpis_logo.ico" />
         <html lang="en" />
       </Head>
       <main>
       <NavBar />
-        <Pagetitle name="achievements" />
+        <Pagetitle name="Career" />
         <div className="m-4 col-start-1 col-span-12 text-left text-lg text-bpisgry font-light grid grid-cols-[3fr_4fr_4fr_4fr] gap-4">
-          <NavigationHelper name="Achievements" />
+          <NavigationHelper name="Career" />
           <LeftSideBar />
           <div className="p-2 sm:p-16 col-span-4 lg:col-span-2 space-y-4" >
             <Image src={Image1} alt="Biology Teacher Wanted" />
@@ -41,4 +41,4 @@ const Achievements: NextPage = () => {
   );
 };
 
-export default Achievements;
+export default Career;
